@@ -1,0 +1,169 @@
+﻿@model MediBook.ViewModels.Default.ConsultationViewModel
+@using MediBook.Data.Entities
+<div class="container__content content">
+    <div class="__box">
+        <div class="consultation__header">
+            <h1>
+                @(Model.IsOnline ? "Онлайн-" : "")Консультація на @Model.Scheduled.ToString("dd.MM.yyyy HH:mm")
+
+                @if (Model.Scheduled > DateTime.Now.AddHours(-1) && Model.Status == ConsultationStatus.Booked)
+                {
+                    <button type="button" class="consultations__reject-btn consultations__reject-btn--doctor" onclick="cancelConsultationByDoctor(@Model.Id)">
+                        <img src="/images/cross-red.svg" alt="Скасувати">
+                    </button>
+                }
+            </h1>
+
+            @if (Model.Status == ConsultationStatus.Booked && Model.IsOnline && string.IsNullOrEmpty(Model.Link))
+            {
+                <div class="status status--fail">Посилання не надано</div>
+            }
+            else if (Model.Status == ConsultationStatus.Booked && Model.Scheduled < DateTime.Now)
+            {
+                <div class="status status--info">Незавершена</div>
+            }
+            else if (Model.Status == ConsultationStatus.Booked || Model.Status == ConsultationStatus.Completed || Model.Status == ConsultationStatus.Available)
+            {
+                <div class="status status--success">@Model.Status.Value.GetDisplayName()</div>
+            }
+            else if (Model.Status == ConsultationStatus.Canceled)
+            {
+                <div class="status status--fail">@Model.Status.Value.GetDisplayName()</div>
+            }
+        </div>
+
+        <div style="position: relative;">
+            @if (Model.IsDoctor)
+            {
+                if (Model.Status == ConsultationStatus.Booked && Model.IsOnline)
+                {
+                    <div class="content__info info info--warning">
+                        <form method="post" action="/consultations/@Model.Id/add-link">
+                            @if (string.IsNullOrEmpty(Model.Link))
+                            {
+                                <p>Надайте, будь ласка, посилання на онлайн-консультацію</p>
+                            }
+
+                            <div class="form__field field">
+                                <label class="field__label label" for="Link">Посилання</label>
+                                <input class="field__text-box text-box" type="text" name="Link" required maxlength="512" style="background-color: unset" value="@Model.Link" />
+                            </div>
+                            <button class="buttons__button button button--positive" style="float: none; margin-top: 1rem;" type="submit">Зберегти</button>
+                        </form>
+                    </div>
+                }
+
+                <p><b>Пацієнт:</b> <a href="/patients/@Model.Patient.Id">@Model.Patient.FullName</a> (@Model.Patient.Gender, @Model.Patient.Birthday.ToString("dd.MM.yyyy"))</p>
+                <p><b>Причина звернення:</b> @Model.ReasonForAppeal</p>
+            }
+            else
+            {
+                <p><b>Лікар:</b> <a href="/doctors/@Model.Doctor.Id">@Model.Doctor.FullName</a></p>
+                <div class="user__topic-names topic-names">
+                    <div class="topic-names__box">
+                        @foreach (var specialization in Model.Doctor.Specializations)
+                        {
+                            <a class="topic-names__topic-name topic-name" href="/doctors?specializationid=@specialization.Id">@specialization.Name</a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.IsOnline && Model.Status == ConsultationStatus.Booked && Model.Scheduled > DateTime.Now.AddMinutes(-30) && Model.Scheduled < DateTime.Now.AddMinutes(30))
+            {
+                @if (!string.IsNullOrWhiteSpace(Model.Link))
+                {
+                    <a class="buttons__button button button--positive" href="@Model.Link" style="position: absolute; right: 0; top: 0;">Перейти на консультацію</a>
+                }
+                else if (string.IsNullOrWhiteSpace(Model.Link))
+                {
+                    <div class="content__info info info--warning">Лікар не надав посилання на онлайн-консультацію</div>
+                }
+            }
+            else if (!Model.IsOnline)
+            {
+                <p><b>Адреса:</b> @Model.Doctor.Organization.Name (Кабінет: @Model.Doctor.Room)</p>
+                <a href="https://maps.google.com/?q=@Model.Doctor.Organization.Address">@Model.Doctor.Organization.Address</a>
+            }
+
+        </div>
+
+        <div class="consultation__result">
+            <div id="consultationTabs" class="tabs tabs--flex tabs--flex-grow">
+                <div class="tabs__tab tabs__tab--active" data-tab-page-id="Results">Результати консультації</div>
+                <div class="tabs__tab" data-tab-page-id="Attachments">Вкладення</div>
+            </div>
+            <div class="tab-pages" data-tabs-id="consultationTabs">
+                <div class="tab-pages__tab-page" id="tabPageResults">
+                    @if (Model.IsDoctor && (Model.Status == ConsultationStatus.Completed || Model.Status == ConsultationStatus.Booked) && Model.Scheduled < DateTime.Now)
+                    {
+                        <form method="post">
+                            <input type="hidden" value="@Model.Id" name="Id" />
+                            <div class="form__field field">
+                                <label class="field__label label" for="DoctorNotes">Нотатки лікаря (внутрішні)</label>
+                                <textarea class="field__text-area text-area" maxlength="1024" name="DoctorNotes">@Model.DoctorNotes</textarea>
+                            </div>
+                            <div class="form__field field">
+                                <label class="field__label label" for="Diagnosis">Діагноз</label>
+                                <textarea class="field__text-area text-area" name="Diagnosis" required maxlength="1024">@Model.Diagnosis</textarea>
+                            </div>
+                            <div class="form__field field">
+                                <label class="field__label label" for="DoctorRecommendations">Рекомендації</label>
+                                <textarea class="field__text-area text-area" name="DoctorRecommendations" required maxlength="1024">@Model.DoctorRecommendations</textarea>
+                            </div>
+                            <div class="form__field field">
+                                <label class="field__label label" for="DoctorComment">Коментар пацієнту</label>
+                                <textarea class="field__text-area text-area" name="DoctorComment" maxlength="1024">@Model.DoctorComment</textarea>
+                            </div>
+
+                            <button class="buttons__button button button--positive" type="submit">Зберегти</button>
+                            @if (Model.Scheduled.AddMinutes(30) < DateTime.Now && Model.Status == ConsultationStatus.Booked)
+                            {
+                                <button class="buttons__button button button--neutral" onclick="patientDidNotShowUp(@Model.Id)">Пацієнт не зʼявився</button>
+                            }
+                        </form>
+                    }
+                    else if (!Model.IsDoctor && Model.Status == ConsultationStatus.Completed)
+                    {
+                        <p style="margin-top: 2rem;"><b>Діагноз:</b> @Model.Diagnosis</p>
+                        <p><b>Рекомендації:</b> @Model.DoctorRecommendations</p>
+                        <p><b>Коментар лікаря:</b> @Model.DoctorComment</p>
+                    }
+                </div>
+                <div class="tab-pages__tab-page" id="tabPageAttachments">
+                    @if ((Model.Status == ConsultationStatus.Completed || Model.Status == ConsultationStatus.Booked) && Model.Scheduled < DateTime.Now)
+                    {
+                        <form method="post" action="/consultations/@Model.Id/attachment" enctype="multipart/form-data">
+                            <input type="hidden" value="@Model.Id" name="Id" />
+                            <div class="form__field field">
+                                <label class="field__label label" for="AttachmentComment">Коментар до вкладення</label>
+                                <textarea class="field__text-area text-area" name="AttachmentComment" maxlength="1024"></textarea>
+                            </div>
+                            <div class="form__field field">
+                                <label class="field__label label field__label--with-value" for="file">Файл</label>
+                                <input type="file" name="file" />
+                            </div>
+                            <button class="buttons__button button button--positive" style="float: none" type="submit">Додати</button>
+                        </form>
+
+                        <div style="margin-top: 2.5rem">
+                            <h3>Вкладення</h3>
+                            @foreach (var item in Model.Attachments)
+                            {
+                                <div class="consultations__row-wrapper" style="padding: 1rem">
+                                    <p><b>Автор:</b> @item.Author</p>
+                                    <p><b>Коментар:</b> @item.Text</p>
+                                    @if (item.File is not null)
+                                    {
+                                        <p><b>Файл:</b> <a href="@item.File" download>Завантажити</a></p>
+                                    }
+                                    <p style="right: 0; top: 0; color: #ababab; position: absolute">@item.Created.ToString("dd.MM.yyyy HH:mm")</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

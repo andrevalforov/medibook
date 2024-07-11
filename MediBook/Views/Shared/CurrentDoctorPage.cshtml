@@ -1,0 +1,48 @@
+﻿@model MediBook.ViewModels.Default.DoctorPageViewModel
+@{
+    this.ViewBag.Title = this.Model.FullName + " | MediBook";
+}
+<div class="container__content content">
+    <div class="__box">
+        <div class="edit__btn">
+            <h1>
+                @Model.FullName
+                @if (Model.IsAvailableOnline)
+                {
+                    <img src="/images/video-camera.png" class="doctor__consultation-available-img" title="Доступний прийом онлайн">
+                }
+            </h1>
+            <a class="buttons__button button button--positive" href="/doctors/me/edit">Редагувати особисту інформацію</a>
+        </div>
+        <div class="user">
+            @{ string photoUrl = string.IsNullOrWhiteSpace(Model.PhotoUrl) ? "/images/avatar-default.png" : Model.PhotoUrl; }
+            <div class="user__photo" style="background-image: url(@photoUrl);"></div>
+            <div class="user__topic-names topic-names">
+                <div class="topic-names__box">
+                    @foreach (var specialization in this.Model.Specializations)
+                    {
+                        <a class="topic-names__topic-name topic-name" href="/doctors?specializationid=@specialization.Id">@specialization.Name</a>
+                    }
+                </div>
+            </div>
+            <p>@Model.Organization (Кабінет: @Model.Room)</p>
+            <p>@Model.City, @Model.Region @(Model.Region.Equals("Автономна Республіка Крим") ? string.Empty : "область")</p>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(this.Model.About))
+        {
+            <h3>Про мене</h3>
+            <p>@Html.Raw(this.Model.About.Replace("\r\n", "</p><p>"))</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(this.Model.ProfessionalExperience))
+        {
+            <h3>Професійний досвід</h3>
+            <p>@Html.Raw(this.Model.ProfessionalExperience.Replace("\r\n", "</p><p>"))</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(this.Model.ProfessionalEducation))
+        {
+            <h3>Професійне навчання</h3>
+            <p>@Html.Raw(this.Model.ProfessionalEducation.Replace("\r\n", "</p><p>"))</p>
+        }
+    </div>
+</div>

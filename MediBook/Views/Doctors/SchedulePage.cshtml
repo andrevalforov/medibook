@@ -1,0 +1,83 @@
+﻿@model MediBook.ViewModels.Doctors.SchedulePageViewModel
+@using MediBook.Data.Entities;
+@{
+    string title = $"Розклад на {Model.Day.Date.ToShortDateString()}";
+    this.ViewBag.Title = $"{title} | MediBook";
+}
+
+<div class="container__content content">
+    <div class="__box">
+        <h1>@title</h1>
+        <form class="form" method="post">
+            <div class="supervisions">
+                @foreach (var consultation in this.Model.Consultations)
+                {
+                    bool isClickable = consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed;
+                    <div class="supervisions__supervision supervision @(isClickable ? "pointer" : "")" onclick="@(isClickable ? $"location.href='/consultations/{consultation.Id}'" : "")">
+                        @if (consultation.Status == ConsultationStatus.Available && consultation.Scheduled > DateTime.Now)
+                        {
+                            <label class="label">
+                                <input id="supervision@(consultation.Scheduled)" name="supervision@(consultation.Scheduled)" type="checkbox" checked="checked"> @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+                        else if (consultation.Status == ConsultationStatus.Available && consultation.Scheduled < DateTime.Now)
+                        {
+                            <label class="label time__unavailable">
+                                <input id="supervision@(consultation.Scheduled)" name="supervision@(consultation.Scheduled)" type="checkbox" checked="checked" disabled="disabled"> @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+                        else if (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed || consultation.Status == ConsultationStatus.Canceled)
+                        {
+                            <label class="label">
+                                <input id="supervision@(consultation.Scheduled)" type="checkbox" checked="checked" disabled="disabled" /> @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                            <label class="supervision__patient">
+                                Пацієнт: <a href="/patients/@consultation.Patient.Id">@consultation.Patient.FullName</a>
+                            </label>
+                            if (consultation.IsOnline)
+                            {
+                                <img src="/images/video-camera.png" class="doctor__consultation-available-img" title="Онлайн-консультація">
+                            }
+                            <input name="supervision@(consultation.Scheduled)" type="hidden" value="" />
+                            @if (consultation.Scheduled > DateTime.Now.AddHours(-1) && consultation.Status == ConsultationStatus.Booked)
+                            {
+                                <button type="button" class="consultations__reject-btn consultations__reject-btn--doctor" onclick="cancelConsultationByDoctor(@consultation.Id)">
+                                    <img src="/images/cross-red.svg" alt="Скасувати">
+                                </button>
+                            }
+                        }
+                        else if (consultation.Scheduled <= DateTime.Now)
+                        {
+                            <label class="label time__unavailable">
+                                <input id="supervision@(consultation.Scheduled)" type="checkbox" disabled="disabled" /> @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+                        else
+                        {
+                            <label class="label">
+                                <input id="supervision@(consultation.Scheduled)" name="supervision@(consultation.Scheduled)" type="checkbox"> @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+
+                        @if (consultation.Status == ConsultationStatus.Booked && consultation.Scheduled < DateTime.Now)
+                        {
+                            <div class="status status--info">Незавершена</div>
+                        }
+                        else if (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed || consultation.Status == ConsultationStatus.Available)
+                        {
+                            <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                        }
+                        else if (consultation.Status == ConsultationStatus.Canceled)
+                        {
+                            <div class="status status--fail">@consultation.Status.Value.GetDisplayName()</div>
+                        }
+                    </div>
+                }
+            </div>
+            <span asp-validation-for="IsActivated"></span>
+            <div class="form__buttons buttons">
+                <button class="buttons__button button button--positive" type="submit">Зберегти</button>
+            </div>
+        </form>
+    </div>
+</div>

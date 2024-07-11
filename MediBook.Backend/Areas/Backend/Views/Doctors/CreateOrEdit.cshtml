@@ -1,0 +1,73 @@
+﻿@model MediBook.Backend.ViewModels.Doctors.CreateOrEditViewModel
+@{
+    this.ViewBag.Title = (this.Model.Id == null ? "Створення лікаря" : "Редагування лікаря");
+    this.ViewBag.ActiveMenuItem = "doctors";
+}
+<form class="form" method="post" id="doctorForm" autocomplete="off">
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+    <title-bar>
+        <button class="buttons__button button button--positive" type="submit">Зберегти</button>
+        <a class="buttons__button button button--neutral" href="@this.Context.Request.CombineUrl("/backend/doctors")">Скасувати</a>
+    </title-bar>
+    <tabs>
+        <tab code="General">Основне</tab>
+        <tab code="Specializations">Спеціальності</tab>
+        <tab code="AboutMe">Про мене</tab>
+        <tab code="Auth">Вхід</tab>
+    </tabs>
+    <tab-pages>
+        <tab-page code="General">
+            <single-line-text-field for="FullName" />
+            <drop-down-list-field for="OrganizationId" options="Model.OrganizationOptions" />
+            <single-line-text-field for="Room" />
+            <image-uploader-field for="PhotoUrl" destination-base-url="/images/objects/" width="400" height="400" />
+            <checkbox-field for="IsAvailableOnline" />
+            <checkbox-field for="IsActivated" />
+            <checkbox-field for="IsHidden" />
+        </tab-page>
+
+        <tab-page code="Specializations">
+            @for (int i = 0; i < Model.DoctorSpecializations.Length; i++)
+            {
+                <div class="form__field field @(i == 0 ? "form__field--separated" : null)">
+                    <a class="checkbox" href="#" id="doctorSpecializations[@i]" tabindex="0">
+                        <div class="checkbox__indicator @(@Model.DoctorSpecializations[i].Selected ? "checkbox__indicator--checked" : "")"></div>
+                        <div class="checkbox__label">@Model.DoctorSpecializations[i].Name</div>
+                        <input name="doctorSpecializations[@i].Selected" type="hidden" value="@Model.DoctorSpecializations[i].Selected.ToString().ToLower()">
+                    </a>
+                </div>
+                <input name="doctorSpecializations[@i].SpecializationId" type="hidden" value="@Model.DoctorSpecializations[i].SpecializationId">
+            }
+        </tab-page>
+
+        <tab-page code="AboutMe">
+            <multiline-text-field for="About" height="Small" />
+            <multiline-text-field for="ProfessionalEducation" height="Small" />
+            <multiline-text-field for="ProfessionalExperience" height="Small" />
+        </tab-page>
+
+        <tab-page code="Auth">
+            <div class="form__field field">
+                <label class="field__label label" for="identifier">Email</label>
+                <div class="field__required">обов’язково</div>
+                <input class="text-box field__text-box" autocomplete="false" data-val="true" data-val-required="Значення має бути вказано" id="identifier" name="identifier" type="text" value="@Model.Identifier">
+                <span class="field-validation-valid" data-valmsg-for="identifier" data-valmsg-replace="true"></span>
+            </div>
+            @if (TempData["Email"] != null)
+            {
+                <span id="EmailError" class="field-wrapper__error field-validation-error">@TempData["Email"]</span>
+            }
+            <single-line-text-field for="Phone" />
+            <div class="form__field field">
+                <label class="field__label label" for="password">Пароль</label>
+                <input class="text-box field__text-box" id="password" name="password" type="password" autocomplete="new-password">
+                <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+            </div>
+            @if (TempData["Password"] != null)
+            {
+                <span id="PasswordError" class="field-wrapper__error field-validation-error">@TempData["Password"]</span>
+            }
+            <secret-field for="RepeatPassword" />
+        </tab-page>
+    </tab-pages>
+</form>

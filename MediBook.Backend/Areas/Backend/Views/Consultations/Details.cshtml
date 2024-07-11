@@ -1,0 +1,145 @@
+﻿@model MediBook.Backend.ViewModels.Consultations.DetailsViewModel
+@{
+    this.ViewBag.Title = "Перегляд консультації";
+    this.ViewBag.ActiveMenuItem = "consultations";
+}
+<form class="form" method="post">
+    <title-bar>
+        <a class="buttons__button button button--neutral" href="/backend/consultations@(Context.Request.QueryString.Value)">Назад</a>
+    </title-bar>
+    <tabs>
+        <tab code="General">Основне</tab>
+        <tab code="Attachments">Вкладення</tab>
+    </tabs>
+    <tab-pages>
+        <tab-page code="General">
+            <table class="table">
+                <rows>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Лікар:
+                        </cell>
+                        <cell class="table__cell">
+                            <a href="/backend/doctors/edit/@Model.DoctorId">@Model.DoctorName</a>
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Спеціальність:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.DoctorSpecialization
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Пацієнт:
+                        </cell>
+                        <cell class="table__cell">
+                            @if (Model.PatientId != null)
+                            {
+                                <a href="/backend/patients/edit/@Model.PatientId">@Model.PatientName</a>
+                            }
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Статус:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.Status
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Дата та час проведення:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.Scheduled
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Причина звернення пацієнта:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.ReasonForAppeal
+                        </cell>
+                    </row>
+                    @*@if (this.Model.NextId != null)
+                        {
+                            <row class="table__row">
+                                <cell class="table__cell table__cell--header table__cell--no-width">
+                                    Назначена лікарем консультація:
+                                </cell>
+                                <cell class="table__cell">
+                                    <a href="@Model.NextId">Переглянути</a>
+                                </cell>
+                            </row>
+                        }*@
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Примітки лікаря:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.DoctorNotes
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Примітки лікаря (для пацієнта):
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.DoctorComment
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Рекомендації лікаря:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.DoctorRecommendations
+                        </cell>
+                    </row>
+                    <row class="table__row">
+                        <cell class="table__cell table__cell--header table__cell--no-width">
+                            Діагноз:
+                        </cell>
+                        <cell class="table__cell">
+                            @Model.Diagnosis
+                        </cell>
+                    </row>
+                    @if (this.Model.Score.HasValue)
+                    {
+                        <row class="table__row">
+                            <cell class="table__cell table__cell--header table__cell--no-width">
+                                Оцінка:
+                            </cell>
+                            <cell class="table__cell">
+                                <partial name="Partials/RatingStars" model="@((int)Model.Score.Value)" />
+                                @(Model.Score.Value + ".0")
+                            </cell>
+                        </row>
+                    }
+                </rows>
+            </table>
+        </tab-page>
+
+        <tab-page code="Attachments">
+            <table>
+                <columns>
+                    <column label="Автор" />
+                    <column label="Повідомлення" />
+                    <column label="Файл" />
+                    <column label="Дата та час" />
+                </columns>
+                <rows>
+                    @foreach (AttachmentViewModel attachment in this.Model.Attachments)
+                    {
+                        <partial name="_Attachment" for="@attachment" />
+                    }
+                </rows>
+            </table>
+        </tab-page>
+    </tab-pages>
+</form>

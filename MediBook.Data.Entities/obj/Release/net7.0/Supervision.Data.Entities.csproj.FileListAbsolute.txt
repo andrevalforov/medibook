@@ -1,0 +1,12 @@
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/bin/Release/net7.0/Supervision.Data.Entities.deps.json
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/bin/Release/net7.0/Supervision.Data.Entities.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/bin/Release/net7.0/Supervision.Data.Entities.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.csproj.AssemblyReference.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.AssemblyInfoInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.AssemblyInfo.cs
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/refint/Supervision.Data.Entities.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/Supervision.Data.Entities.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.Entities/obj/Release/net7.0/ref/Supervision.Data.Entities.dll

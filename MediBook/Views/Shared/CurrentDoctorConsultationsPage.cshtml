@@ -1,0 +1,178 @@
+﻿@model MediBook.ViewModels.Doctors.DoctorConsultationsPageViewModel
+@using MediBook.Data.Entities
+@{
+    this.ViewBag.Title = this.Model.FullName + " | MediBook";
+}
+<div class="container__content content">
+    <div class="__box">
+        <div class="consultations__container">
+            <div class="consultations__block">
+                <h2>Розклад консультацій</h2>
+                <div class="form__field field">
+                    <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="year" onchange="onCalendarFiltersChange('doctor', @this.Model.Id)">
+                        @for (int year = DateTime.Now.Year - 1; year <= DateTime.Now.Year + 1; year++)
+                        {
+                            if (year == DateTime.Now.Year)
+                            {
+                                <option value="@year" selected>@year</option>
+                            }
+                            else
+                            {
+                                <option value="@year">@year</option>
+                            }
+                        }
+                    </select>
+                    <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="month" onchange="onCalendarFiltersChange('doctor', @this.Model.Id)">
+                        @{
+                            int monthIndex = 1;
+                            int currentMonthNumber = DateTime.Now.Month;
+                        }
+                        @foreach (string monthName in System.Globalization.DateTimeFormatInfo.CurrentInfo.MonthNames.Where(m => !string.IsNullOrWhiteSpace(m)))
+                        {
+                            if (monthIndex == currentMonthNumber)
+                            {
+                                <option value="@monthIndex" selected>@monthName</option>
+                            }
+                            else
+                            {
+                                <option value="@monthIndex">@monthName</option>
+                            }
+                            monthIndex++;
+                        }
+                    </select>
+                </div>
+                <div id="calendarContainer" on="onCalendarFiltersChange('doctor', @this.Model.Id)">
+                    @Html.Partial("_Calendar", this.Model.Calendar as object)
+                </div>
+            </div>
+            <div class="consultations__block">
+                <h2>Мої консультації</h2>
+                <div id="consultationsTabs" class="tabs tabs--flex tabs--flex-grow">
+                    <div class="tabs__tab tabs__tab--active" data-tab-page-id="Current">Майбутні</div>
+                    @if (Model.ActionNeededCount > 0)
+                    {
+                        <div class="tabs__tab" data-tab-page-id="ActionNeeded">Незавершені (@Model.ActionNeededCount)</div>
+                    }
+                    <div class="tabs__tab" data-tab-page-id="Archived" id="doctorArchiveTab">Архів</div>
+                </div>
+                <div class="tab-pages" data-tabs-id="consultationsTabs">
+                    <div class="tab-pages__tab-page" id="tabPageCurrent">
+                        @foreach (var consultation in Model.ActiveConsultations)
+                        {
+                            <div class="consultations__row-wrapper">
+                                <a href="/consultations/@consultation.Id" class="consultations__row consultations__row--doctor consultations__row--with-join-btn" data-consultation-id="@consultation.Id">
+
+                                    <div class="consultations__date-col consultations__col">
+                                        <b class="consultations__col-label">Дата та час</b>
+                                        <div class="consultations__col-value">
+                                            <div class="consultations__item-link consultations__item-link--field">
+                                                <span class="consultations__item-date">@consultation.Scheduled.ToString("dd.MM.yyyy")</span>
+                                                <span class="consultations__item-time">@consultation.Scheduled.ToString("HH:mm")</span>
+                                                @if (consultation.IsOnline)
+                                                {
+                                                    <img src="/images/video-camera.png" class="doctor__consultation-available-img" style="margin-left: 1.25rem;">
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="consultations__status-col consultations__col">
+                                        <b class="consultations__col-label">Статус</b>
+                                        <div class="consultations__col-value">
+                                            @if (consultation.Status == ConsultationStatus.Booked && consultation.IsOnline && string.IsNullOrEmpty(consultation.Link))
+                                            {
+                                                <div class="status status--fail">Посилання не надано</div>
+                                            }
+                                            else if (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed)
+                                            {
+                                                <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                                            }
+                                            else
+                                            {
+                                                <div class="status status--fail">@consultation.Status.Value.GetDisplayName()</div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="consultations__doctor-col consultations__col">
+                                        <b class="consultations__col-label">Пацієнт</b>
+                                        <div class="consultations__col-value">
+                                            <span class="consultations__item-link consultations__item-link--field">@consultation.Patient.FullName</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    <div class="tab-pages__tab-page consultations__doctor-action-needed-tab" id="tabPageActionNeeded">
+                        @foreach (var consultation in Model.ActionNeededConsultations)
+                        {
+                            <div class="consultations__row-wrapper">
+                                <a href="/consultations/@consultation.Id" class="consultations__row consultations__row--doctor consultations__row--with-join-btn" data-consultation-id="@consultation.Id">
+
+                                    <div class="consultations__date-col consultations__col">
+                                        <b class="consultations__col-label">Дата та час</b>
+                                        <div class="consultations__col-value">
+                                            <div class="consultations__item-link consultations__item-link--field">
+                                                <span class="consultations__item-date">@consultation.Scheduled.ToString("dd.MM.yyyy")</span>
+                                                <span class="consultations__item-time">@consultation.Scheduled.ToString("HH:mm")</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="consultations__status-col consultations__col">
+                                        <b class="consultations__col-label">Статус</b>
+                                        <div class="consultations__col-value">
+                                            <div class="status status--info">Незавершена</div>
+                                        </div>
+                                    </div>
+                                    <div class="consultations__doctor-col consultations__col">
+                                        <b class="consultations__col-label">Пацієнт</b>
+                                        <div class="consultations__col-value">
+                                            <span class="consultations__item-link consultations__item-link--field">@consultation.Patient.FullName</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    <div class="tab-pages__tab-page consultations__doctor-archived-tab" id="tabPageArchived">
+                        @foreach (var consultation in Model.ArchiveConsultations)
+                        {
+                            <div class="consultations__row-wrapper">
+                                <a href="/consultations/@consultation.Id" class="consultations__row consultations__row--doctor consultations__row--with-join-btn" data-consultation-id="@consultation.Id">
+
+                                    <div class="consultations__date-col consultations__col">
+                                        <b class="consultations__col-label">Дата та час</b>
+                                        <div class="consultations__col-value">
+                                            <div class="consultations__item-link consultations__item-link--field">
+                                                <span class="consultations__item-date">@consultation.Scheduled.ToString("dd.MM.yyyy")</span>
+                                                <span class="consultations__item-time">@consultation.Scheduled.ToString("HH:mm")</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="consultations__status-col consultations__col">
+                                        <b class="consultations__col-label">Статус</b>
+                                        <div class="consultations__col-value">
+                                            @if (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed)
+                                            {
+                                                <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                                            }
+                                            else
+                                            {
+                                                <div class="status status--fail">@consultation.Status.Value.GetDisplayName()</div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="consultations__doctor-col consultations__col">
+                                        <b class="consultations__col-label">Пацієнт</b>
+                                        <div class="consultations__col-value">
+                                            <span class="consultations__item-link consultations__item-link--field">@consultation.Patient.FullName</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

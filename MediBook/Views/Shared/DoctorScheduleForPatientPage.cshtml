@@ -1,0 +1,95 @@
+﻿@model MediBook.ViewModels.Shared.SchedulePageViewModel
+@using MediBook.Data.Entities;
+@{
+    string title = $"Розклад на {Model.Day.Date.ToShortDateString()}";
+    this.ViewBag.Title = $"{title} | MediBook";
+}
+
+<div class="container__content content">
+    <div class="__box">
+        <h1>@title</h1>
+        <h3 style="margin-top: 0">@Model.DoctorFullName</h3>
+        <div class="supervisions">
+            @foreach (var consultation in this.Model.Consultations)
+            {
+                bool isClickable = (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed) && consultation.Patient.Id == Model.PatientId;
+
+                if (isClickable)
+                {
+                    <div class="supervisions__supervision supervision pointer" onclick="location.href='/consultations/@consultation.Id'">
+                        <label class="label">
+                            @consultation.Scheduled.ToShortTimeString()
+                        </label>
+                        <label class="supervision__patient">
+                            @(consultation.IsOnline ? "Онлайн-к" : "К")онсультація з @Model.DoctorFullName
+                        </label>
+                        <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                    </div>
+                }
+                else if (consultation.Status == ConsultationStatus.Available && consultation.Scheduled > DateTime.Now)
+                {
+                    <div class="supervisions__supervision supervision pointer" onclick="document.getElementById('cons_@consultation.Id').hidden = false;">
+                        <label class="label">
+                            @consultation.Scheduled.ToShortTimeString()
+                        </label>
+                        <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                        <div id="cons_@consultation.Id" hidden style="min-width: 50%; margin-left: 3rem;">
+                            <input type="hidden" value="@consultation.Id" name="Id" />
+                            <div class="form__field field">
+                                <label class="field__label label" for="ReasonForAppeal">Причина звернення</label>
+                                <textarea class="field__text-area text-area" name="ReasonForAppeal" id="reason_@consultation.Id" maxlength="1024"></textarea>
+                            </div>
+                            @if (consultation.Doctor.IsAvailableOnline)
+                            {
+                                <div class="form__field field">
+                                    <label class="field__label label field__label--with-value" for="isOnline">Формат консультації</label>
+                                    <label style="font: bold 1rem 'Montserrat',sanf-serif;">
+                                        <input name="isOnline_@consultation.Id" type="radio" value="true" />
+                                        Онлайн
+                                    </label>
+                                    <label style="font: bold 1rem 'Montserrat',sanf-serif;">
+                                        <input name="isOnline_@consultation.Id" type="radio" value="false" />
+                                        Офлайн
+                                    </label>
+                                </div>
+                            }
+                            <button class="buttons__button button button--positive" style="margin-top: 2rem" onclick="bookConsultation(@consultation.Id)">Записатися</button>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="supervisions__supervision supervision">
+                        <label class="label time__unavailable">
+                            @consultation.Scheduled.ToShortTimeString()
+                        </label>
+                    </div>
+                }
+
+                @*<div class="supervisions__supervision supervision @(isClickable ? "pointer" : "")" onclick="@(isClickable ? $"location.href='/consultations/{consultation.Id}'" : "")">
+                        @if (consultation.Status == ConsultationStatus.Available && consultation.Scheduled > DateTime.Now || consultation.Status == ConsultationStatus.Booked && consultation.Patient.Id == Model.PatientId && consultation.Scheduled > DateTime.Now.AddMinutes(-30))
+                        {
+                            <label class="label">
+                                @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+                        else
+                        {
+                            <label class="label time__unavailable">
+                                @consultation.Scheduled.ToShortTimeString()
+                            </label>
+                        }
+
+                        @if (consultation.Status == ConsultationStatus.Booked && consultation.Patient.Id == Model.PatientId || consultation.Status == ConsultationStatus.Available)
+                        {
+                            <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+                        }
+                        else if (consultation.Status == ConsultationStatus.Canceled && consultation.Patient.Id == Model.PatientId)
+                        {
+                            <div class="status status--fail">@consultation.Status.Value.GetDisplayName()</div>
+                        }
+                    </div>*@
+            }
+        </div>
+    </div>
+</div>

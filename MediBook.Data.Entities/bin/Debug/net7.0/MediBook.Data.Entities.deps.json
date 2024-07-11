@@ -1,0 +1,114 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MediBook.Data.Entities/1.0.0": {
+        "dependencies": {
+          "Platformus.Core.Data.Entities": "4.0.0",
+          "Platformus.Website.Data.Entities": "4.0.0"
+        },
+        "runtime": {
+          "MediBook.Data.Entities.dll": {}
+        }
+      },
+      "ExtCore.Data.Entities.Abstractions/8.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+        "dependencies": {
+          "ExtCore.Data.Entities.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Magicalizer.Filters.Abstractions/3.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Platformus.Core.Data.Entities/4.0.0": {
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Core.Data.Entities.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Platformus.Website.Data.Entities/4.0.0": {
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0",
+          "Platformus.Core.Data.Entities": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Website.Data.Entities.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MediBook.Data.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtCore.Data.Entities.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-td/yAEPn9kBjVrfFw6fgU530iuiRiOwbCm2+pDYYuqw8spgi+Ip5+fj6hcn6xd/f8sxIe157rnenLgt/IAD9yA==",
+      "path": "extcore.data.entities.abstractions/8.0.0",
+      "hashPath": "extcore.data.entities.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gs5eR6RIKgoeZVKO+XicZdQm6l6/H2leFwfpqPMrWmmQdsyifNc/BNm6RX470ZUlYM4ri/26orSkF7Tk74CyHw==",
+      "path": "magicalizer.data.entities.abstractions/3.0.0",
+      "hashPath": "magicalizer.data.entities.abstractions.3.0.0.nupkg.sha512"
+    },
+    "Magicalizer.Filters.Abstractions/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tmYIzmBdU3GzoVdgbZNs5FGtGktUHQTfaDzyLhcvR2h+/Xx1bNLeWQiwb8A2i9colqM3GG9H5R5Kbr8aPFM3cw==",
+      "path": "magicalizer.filters.abstractions/3.0.0",
+      "hashPath": "magicalizer.filters.abstractions.3.0.0.nupkg.sha512"
+    },
+    "Platformus.Core.Data.Entities/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MMVVeCHoAn2U4StEBt6CuzLlZFmu/v8FHpdUqfuG65elvJKW+5pb8VcsA/5QR/FwbxOp73C3jU7/cmhvumi5mA==",
+      "path": "platformus.core.data.entities/4.0.0",
+      "hashPath": "platformus.core.data.entities.4.0.0.nupkg.sha512"
+    },
+    "Platformus.Website.Data.Entities/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UERi6ThXlbyxQEpwbtK7Y0XLZoCtGkBx/DbK9Sa96BI822IcOV7qCvqruHqWmdgr2SFigaX5Ow4hEh9xwC55iQ==",
+      "path": "platformus.website.data.entities/4.0.0",
+      "hashPath": "platformus.website.data.entities.4.0.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿@model MediBook.Backend.ViewModels.Specializations.IndexViewModel
+@{
+    this.ViewBag.Title = "Спеціальності";
+    this.ViewBag.ActiveMenuItem = "specializations";
+}
+<title-bar>
+    <positive-button href="/backend/specializations/create">Додати спеціальність</positive-button>
+</title-bar>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Назва" sorting-property-path="Name" />
+        <column label="Позиція" sorting-property-path="Position" />
+    </columns>
+    <rows>
+        @foreach (SpecializationViewModel specialization in this.Model.Specializations)
+        {
+            <partial name="_Specialization" for="@specialization" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

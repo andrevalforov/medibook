@@ -1,0 +1,10 @@
+﻿@model MediBook.Backend.ViewModels.Shared.ConsultationViewModel
+<row class="table__row" href="/backend/consultations/details/@Model.Id">
+    <cell>@Model.Doctor</cell>
+    <cell>@Model.Patient</cell>
+    <cell>@Model.Status</cell>
+    <cell>@Model.Scheduled</cell>
+    @*<row-controls>
+        <delete-button href="/backend/consultations/delete/@Model.Id"></delete-button>
+    </row-controls>*@
+</row>

@@ -1,0 +1,153 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/android-chrome-192x192.png",
+      "PackagePath": "staticwebassets/android-chrome-192x192.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/android-chrome-512x512.png",
+      "PackagePath": "staticwebassets/android-chrome-512x512.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/apple-touch-icon.png",
+      "PackagePath": "staticwebassets/apple-touch-icon.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/browserconfig.xml",
+      "PackagePath": "staticwebassets/browserconfig.xml"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/css/supervision.min.css",
+      "PackagePath": "staticwebassets/css/supervision.min.css"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/errors/400.html",
+      "PackagePath": "staticwebassets/errors/400.html"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/errors/401.html",
+      "PackagePath": "staticwebassets/errors/401.html"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/errors/404.html",
+      "PackagePath": "staticwebassets/errors/404.html"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/errors/500.html",
+      "PackagePath": "staticwebassets/errors/500.html"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/favicon-16x16.png",
+      "PackagePath": "staticwebassets/favicon-16x16.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/favicon-32x32.png",
+      "PackagePath": "staticwebassets/favicon-32x32.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/files/placeholder.png",
+      "PackagePath": "staticwebassets/files/placeholder.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/arrow_down.svg",
+      "PackagePath": "staticwebassets/images/arrow_down.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_facebook.svg",
+      "PackagePath": "staticwebassets/images/contact_type_facebook.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_phone.svg",
+      "PackagePath": "staticwebassets/images/contact_type_phone.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_skype.svg",
+      "PackagePath": "staticwebassets/images/contact_type_skype.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_telegram.svg",
+      "PackagePath": "staticwebassets/images/contact_type_telegram.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_viber.svg",
+      "PackagePath": "staticwebassets/images/contact_type_viber.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/contact_type_whatsapp.svg",
+      "PackagePath": "staticwebassets/images/contact_type_whatsapp.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/logo_no_text.png",
+      "PackagePath": "staticwebassets/images/logo_no_text.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/objects/36/banner1.jpg",
+      "PackagePath": "staticwebassets/images/objects/36/banner1.jpg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/objects/37/banner2.jpg",
+      "PackagePath": "staticwebassets/images/objects/37/banner2.jpg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/objects/38/banner3.jpg",
+      "PackagePath": "staticwebassets/images/objects/38/banner3.jpg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/objects/39/banner4.jpg",
+      "PackagePath": "staticwebassets/images/objects/39/banner4.jpg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/objects/40/banner5.jpg",
+      "PackagePath": "staticwebassets/images/objects/40/banner5.jpg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/stars_background.png",
+      "PackagePath": "staticwebassets/images/stars_background.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/images/stars_foreground.png",
+      "PackagePath": "staticwebassets/images/stars_foreground.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/js/supervision.min.js",
+      "PackagePath": "staticwebassets/js/supervision.min.js"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/mstile-150x150.png",
+      "PackagePath": "staticwebassets/mstile-150x150.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/safari-pinned-tab.svg",
+      "PackagePath": "staticwebassets/safari-pinned-tab.svg"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision/wwwroot/site.webmanifest",
+      "PackagePath": "staticwebassets/site.webmanifest"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.Supervision.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.Supervision.props",
+      "PackagePath": "build\\Supervision.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.Supervision.props",
+      "PackagePath": "buildMultiTargeting\\Supervision.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.Supervision.props",
+      "PackagePath": "buildTransitive\\Supervision.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

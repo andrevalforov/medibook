@@ -1,0 +1,46 @@
+﻿@model MediBook.Backend.ViewModels.Emails.DetailsViewModel
+@{
+  this.ViewBag.Title = "Перегляд надісланого листа";
+  this.ViewBag.ActiveMenuItem = "emails";
+}
+<form class="form" method="post"> 
+  <title-bar> 
+    <neutral-button href="/backend/emails">Назад</neutral-button> 
+  </title-bar> 
+  <table class="table"> 
+    <rows> 
+      <row class="table__row"> 
+        <cell class="table__cell table__cell--header table__cell--no-width"> 
+          Отримувач: 
+        </cell> 
+        <cell class="table__cell"> 
+          @Model.Receiver
+        </cell> 
+      </row> 
+      <row class="table__row"> 
+        <cell class="table__cell table__cell--header table__cell--no-width"> 
+          Тема: 
+        </cell> 
+        <cell class="table__cell"> 
+          @Model.Subject
+        </cell> 
+      </row> 
+      <row class="table__row"> 
+        <cell class="table__cell table__cell--header table__cell--no-width"> 
+          Надіслано: 
+        </cell> 
+        <cell class="table__cell"> 
+          @Model.Sent 
+        </cell> 
+      </row> 
+      <row class="table__row"> 
+        <cell class="table__cell table__cell--header table__cell--no-width"> 
+          Текст: 
+        </cell> 
+        <cell class="table__cell"> 
+          @Html.Raw(Model.Text) 
+        </cell> 
+      </row> 
+    </rows> 
+  </table> 
+</form>

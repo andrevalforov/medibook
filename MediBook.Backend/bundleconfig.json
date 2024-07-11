@@ -1,0 +1,25 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/areas/backend/css/supervision.min.css",
+    "inputFiles": [
+      "Areas/Backend/Styles/filter.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/areas/backend/css/certificate.min.css",
+    "inputFiles": [
+      "Areas/Backend/Styles/certificate.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/areas/backend/js/supervision.min.js",
+    "inputFiles": [
+      "Areas/Backend/Scripts/ui.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

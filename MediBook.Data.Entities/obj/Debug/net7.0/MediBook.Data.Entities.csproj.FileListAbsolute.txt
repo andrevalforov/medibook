@@ -1,0 +1,12 @@
+/Users/pc/Projects/medibook/MediBook.Data.Entities/bin/Debug/net7.0/MediBook.Data.Entities.deps.json
+/Users/pc/Projects/medibook/MediBook.Data.Entities/bin/Debug/net7.0/MediBook.Data.Entities.dll
+/Users/pc/Projects/medibook/MediBook.Data.Entities/bin/Debug/net7.0/MediBook.Data.Entities.pdb
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.csproj.AssemblyReference.cache
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.AssemblyInfoInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.AssemblyInfo.cs
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.dll
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/refint/MediBook.Data.Entities.dll
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/MediBook.Data.Entities.pdb
+/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/Debug/net7.0/ref/MediBook.Data.Entities.dll

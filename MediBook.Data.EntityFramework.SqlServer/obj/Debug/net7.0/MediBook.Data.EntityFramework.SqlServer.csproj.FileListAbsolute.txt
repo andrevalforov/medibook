@@ -1,0 +1,17 @@
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.deps.json
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.pdb
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.Abstractions.dll
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.Entities.dll
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.Abstractions.pdb
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/bin/Debug/net7.0/MediBook.Data.Entities.pdb
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.csproj.AssemblyReference.cache
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.AssemblyInfoInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.AssemblyInfo.cs
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.csproj.CopyComplete
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/refint/MediBook.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/MediBook.Data.EntityFramework.SqlServer.pdb
+/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/Debug/net7.0/ref/MediBook.Data.EntityFramework.SqlServer.dll

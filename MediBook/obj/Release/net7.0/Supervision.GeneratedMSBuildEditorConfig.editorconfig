@@ -1,0 +1,153 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Supervision
+build_property.RootNamespace = Supervision
+build_property.ProjectDir = /Users/pc/Projects/supervision-web/Supervision/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/pc/Projects/supervision-web/Supervision
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Areas/Backend/Views/Shared/_BackendScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQmFja2VuZC9WaWV3cy9TaGFyZWQvX0JhY2tlbmRTY3JpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Account/RestorePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZXN0b3JlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Account/SignInPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TaWduSW5QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Account/SignUpPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TaWduVXBQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/ConcreteNewsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbmNyZXRlTmV3c1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/CurrentSuperviseePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0N1cnJlbnRTdXBlcnZpc2VlUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/CurrentSupervisorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0N1cnJlbnRTdXBlcnZpc29yUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/FeedbackPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0ZlZWRiYWNrUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0hvbWVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/NewsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL05ld3NQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/RegularPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1JlZ3VsYXJQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/SuperviseePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N1cGVydmlzZWVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/SuperviseeSchedulePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N1cGVydmlzZWVTY2hlZHVsZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/SupervisorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N1cGVydmlzb3JQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/SupervisorSchedulePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N1cGVydmlzb3JTY2hlZHVsZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/SupervisorsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N1cGVydmlzb3JzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/TopicsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1RvcGljc1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19DYWxlbmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_MenuItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19NZW51SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_ReCAPTCHA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19SZUNBUFRDSEEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SuperviseeScheduleItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdXBlcnZpc2VlU2NoZWR1bGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SuperviseeScheduleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdXBlcnZpc2VlU2NoZWR1bGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SupervisorScheduleItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdXBlcnZpc29yU2NoZWR1bGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SupervisorScheduleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdXBlcnZpc29yU2NoZWR1bGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/CompleteSupervisionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNlZXMvQ29tcGxldGVTdXBlcnZpc2lvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNlZXMvRWRpdFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/SchedulePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNlZXMvU2NoZWR1bGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/BookPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNvcnMvQm9va1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/CompleteSupervisionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNvcnMvQ29tcGxldGVTdXBlcnZpc2lvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNvcnMvRWRpdFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/SchedulePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VwZXJ2aXNvcnMvU2NoZWR1bGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Projects/supervision-web/Supervision/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

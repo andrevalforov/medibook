@@ -1,0 +1,150 @@
+﻿@model MediBook.ViewModels.Default.PatientPageViewModel
+@using MediBook.Data.Entities
+@{
+    this.ViewBag.Title = this.Model.FullName;
+}
+<div class="container__content content">
+    <div class="__box">
+        <h1>@Model.FullName</h1>
+        <p><b>Стать:</b> @Model.Gender.GetDisplayName()</p>
+        <p><b>Дата народження:</b> @Model.Birthday.ToString("dd.MM.yyyy")</p>
+        <p><b>Email:</b> @Model.Email</p>
+        <p><b>Телефон:</b> @Model.Phone</p>
+        <p><b>Особливі відмітки:</b> @Model.About</p>
+
+        <h1>Консультації</h1>
+        @foreach (var consultation in Model.Consultations)
+        {
+            <table class="consultations__row-wrapper" style="margin-bottom: 2rem; padding-bottom: 2rem;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Дата та час</b>
+                        </td>
+                        <td>
+                            <div class="consultations__item-link consultations__item-link--field">
+                                <span class="consultations__item-date">@consultation.Scheduled.ToString("dd.MM.yyyy")</span>
+                                <span class="consultations__item-time">@consultation.Scheduled.ToString("HH:mm")</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Лікар</b>
+                        </td>
+                        <td>
+                            <div class="consultations__col-value">
+                                <span class="consultations__item-link consultations__item-link--field">@consultation.Doctor.FullName</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Причина звернення</b>
+                        </td>
+                        <td>
+                            <div class="consultations__col-value">
+                                <span class="consultations__item-link consultations__item-link--field">@consultation.ReasonForAppeal</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Діагноз</b>
+                        </td>
+                        <td>
+                            <div class="consultations__col-value">
+                                <span class="consultations__item-link consultations__item-link--field">@consultation.Diagnosis</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Рекомендації</b>
+                        </td>
+                        <td>
+                            <div class="consultations__col-value">
+                                <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorRecommendations</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="consultations__col-label">Коментар</b>
+                        </td>
+                        <td>
+                            <div class="consultations__col-value">
+                                <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorComment</span>
+                            </div>
+                        </td>
+                    </tr>
+                    @if (consultation.Doctor.Id == Model.CurrentUserId)
+                    {
+                        <tr>
+                            <td>
+                                <b class="consultations__col-label">Нотатки (внутрішні)</b>
+                            </td>
+                            <td>
+                                <div class="consultations__col-value">
+                                    <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorNotes</span>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @*<div class="consultations__row-wrapper">
+                            <a class="consultations__row consultations__row--doctor consultations__row--with-join-btn">
+                                <div class="consultations__date-col consultations__col">
+                                    <b class="consultations__col-label">Дата та час</b>
+                                    <div class="consultations__col-value">
+                                        <div class="consultations__item-link consultations__item-link--field">
+                                            <span class="consultations__item-date">@consultation.Scheduled.ToString("dd.MM.yyyy")</span>
+                                            <span class="consultations__item-time">@consultation.Scheduled.ToString("HH:mm")</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="consultations__doctor-col consultations__col">
+                                    <b class="consultations__col-label">Лікар</b>
+                                    <div class="consultations__col-value">
+                                        <span class="consultations__item-link consultations__item-link--field">@consultation.Doctor.FullName</span>
+                                    </div>
+                                </div>
+                                <div class="consultations__doctor-col consultations__col">
+                                    <b class="consultations__col-label">Причина звернення</b>
+                                    <div class="consultations__col-value">
+                                        <span class="consultations__item-link consultations__item-link--field">@consultation.ReasonForAppeal</span>
+                                    </div>
+                                </div>
+                                <div class="consultations__doctor-col consultations__col">
+                                    <b class="consultations__col-label">Діагноз</b>
+                                    <div class="consultations__col-value">
+                                        <span class="consultations__item-link consultations__item-link--field">@consultation.Diagnosis</span>
+                                    </div>
+                                </div>
+                                <div class="consultations__doctor-col consultations__col">
+                                    <b class="consultations__col-label">Рекомендації</b>
+                                    <div class="consultations__col-value">
+                                        <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorRecommendations</span>
+                                    </div>
+                                </div>
+                                <div class="consultations__doctor-col consultations__col">
+                                    <b class="consultations__col-label">Коментар</b>
+                                    <div class="consultations__col-value">
+                                        <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorComment</span>
+                                    </div>
+                                </div>
+                                @if (consultation.Doctor.Id == Model.CurrentUserId)
+                                {
+                                    <div class="consultations__doctor-col consultations__col">
+                                        <b class="consultations__col-label">Нотатки (внутрішні)</b>
+                                        <div class="consultations__col-value">
+                                            <span class="consultations__item-link consultations__item-link--field">@consultation.DoctorNotes</span>
+                                        </div>
+                                    </div>
+                                }
+                            </a>
+                        </div>*@
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

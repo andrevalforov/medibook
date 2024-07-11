@@ -1,0 +1,13 @@
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/bin/Debug/netstandard2.0/Supervision.Data.Abstractions.deps.json
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/bin/Debug/netstandard2.0/Supervision.Data.Abstractions.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/bin/Debug/netstandard2.0/Supervision.Data.Abstractions.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/bin/Debug/netstandard2.0/Supervision.Data.Entities.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/bin/Debug/netstandard2.0/Supervision.Data.Entities.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.csproj.AssemblyReference.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.AssemblyInfoInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.AssemblyInfo.cs
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.csproj.CopyComplete
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.Abstractions/obj/Debug/netstandard2.0/Supervision.Data.Abstractions.pdb

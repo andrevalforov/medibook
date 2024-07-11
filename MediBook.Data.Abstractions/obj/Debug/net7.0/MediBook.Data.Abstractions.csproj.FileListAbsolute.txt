@@ -1,0 +1,15 @@
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/bin/Debug/net7.0/MediBook.Data.Abstractions.deps.json
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/bin/Debug/net7.0/MediBook.Data.Abstractions.dll
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/bin/Debug/net7.0/MediBook.Data.Abstractions.pdb
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/bin/Debug/net7.0/MediBook.Data.Entities.dll
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/bin/Debug/net7.0/MediBook.Data.Entities.pdb
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.csproj.AssemblyReference.cache
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.AssemblyInfoInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.AssemblyInfo.cs
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.csproj.CopyComplete
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.dll
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/refint/MediBook.Data.Abstractions.dll
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/MediBook.Data.Abstractions.pdb
+/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/Debug/net7.0/ref/MediBook.Data.Abstractions.dll

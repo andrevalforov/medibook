@@ -1,0 +1,13 @@
+﻿@model MediBook.Backend.ViewModels.Specializations.CreateOrEditViewModel
+@{
+    this.ViewBag.Title = (this.Model.Id == null ? "Додавання спеціальності" : "Редагування спеціальності");
+    this.ViewBag.ActiveMenuItem = "specializations";
+}
+<form class="form" method="post">
+    <title-bar>
+        <submit-button>Зберегти</submit-button>
+        <neutral-button href="/backend/specializations">Скасувати</neutral-button>
+    </title-bar>
+    <single-line-text-field for="Name" />
+    <integer-field for="Position" />
+</form>

@@ -1,0 +1,207 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "ExtCore.Data.Entities.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {}
+        }
+      },
+      "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ExtCore.Data.Entities.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll": {}
+        }
+      },
+      "Magicalizer.Filters.Abstractions/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll": {}
+        }
+      },
+      "Platformus.Core.Data.Entities/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Platformus.Core.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Core.Data.Entities.dll": {}
+        }
+      },
+      "Platformus.Website.Data.Entities/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0",
+          "Platformus.Core.Data.Entities": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Platformus.Website.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Website.Data.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExtCore.Data.Entities.Abstractions/8.0.0": {
+      "sha512": "td/yAEPn9kBjVrfFw6fgU530iuiRiOwbCm2+pDYYuqw8spgi+Ip5+fj6hcn6xd/f8sxIe157rnenLgt/IAD9yA==",
+      "type": "package",
+      "path": "extcore.data.entities.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "extcore.data.entities.abstractions.8.0.0.nupkg.sha512",
+        "extcore.data.entities.abstractions.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll"
+      ]
+    },
+    "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+      "sha512": "Gs5eR6RIKgoeZVKO+XicZdQm6l6/H2leFwfpqPMrWmmQdsyifNc/BNm6RX470ZUlYM4ri/26orSkF7Tk74CyHw==",
+      "type": "package",
+      "path": "magicalizer.data.entities.abstractions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll",
+        "magicalizer.data.entities.abstractions.3.0.0.nupkg.sha512",
+        "magicalizer.data.entities.abstractions.nuspec"
+      ]
+    },
+    "Magicalizer.Filters.Abstractions/3.0.0": {
+      "sha512": "tmYIzmBdU3GzoVdgbZNs5FGtGktUHQTfaDzyLhcvR2h+/Xx1bNLeWQiwb8A2i9colqM3GG9H5R5Kbr8aPFM3cw==",
+      "type": "package",
+      "path": "magicalizer.filters.abstractions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll",
+        "magicalizer.filters.abstractions.3.0.0.nupkg.sha512",
+        "magicalizer.filters.abstractions.nuspec"
+      ]
+    },
+    "Platformus.Core.Data.Entities/4.0.0": {
+      "sha512": "MMVVeCHoAn2U4StEBt6CuzLlZFmu/v8FHpdUqfuG65elvJKW+5pb8VcsA/5QR/FwbxOp73C3jU7/cmhvumi5mA==",
+      "type": "package",
+      "path": "platformus.core.data.entities/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Platformus.Core.Data.Entities.dll",
+        "platformus.core.data.entities.4.0.0.nupkg.sha512",
+        "platformus.core.data.entities.nuspec"
+      ]
+    },
+    "Platformus.Website.Data.Entities/4.0.0": {
+      "sha512": "UERi6ThXlbyxQEpwbtK7Y0XLZoCtGkBx/DbK9Sa96BI822IcOV7qCvqruHqWmdgr2SFigaX5Ow4hEh9xwC55iQ==",
+      "type": "package",
+      "path": "platformus.website.data.entities/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Platformus.Website.Data.Entities.dll",
+        "platformus.website.data.entities.4.0.0.nupkg.sha512",
+        "platformus.website.data.entities.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Platformus.Core.Data.Entities >= 4.0.0",
+      "Platformus.Website.Data.Entities >= 4.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/pc/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj",
+      "projectName": "MediBook.Data.Entities",
+      "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj",
+      "packagesPath": "/Users/pc/.nuget/packages/",
+      "outputPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/pc/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "Platformus.Core.Data.Entities": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Platformus.Website.Data.Entities": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

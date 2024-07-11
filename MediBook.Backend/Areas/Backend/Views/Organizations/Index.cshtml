@@ -1,0 +1,22 @@
+﻿@model MediBook.Backend.ViewModels.Organizations.IndexViewModel
+@{
+  this.ViewBag.Title = "Організації";
+  this.ViewBag.ActiveMenuItem = "organizations";
+}
+<title-bar>
+    <positive-button href="/backend/organizations/create">Додати організацію</positive-button>
+</title-bar>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Назва" sorting-property-path="Name" />
+        <column label="Місто" />
+    </columns>
+    <rows>
+        @foreach (OrganizationViewModel organization in this.Model.Organizations)
+        {
+            <partial name="_Organization" for="@organization" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

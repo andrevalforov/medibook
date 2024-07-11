@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "wJtIPe8IYhTztDwIla9SDpXYSlf33KrIJyEZoKw3LbcMdYBaBwr/+edQ81EKCUmQYAECnft3PmGaWgojD0BWIA==",
+  "success": true,
+  "projectFilePath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
+  "expectedPackageFiles": [
+    "/Users/pc/.nuget/packages/extcore.data.abstractions/8.0.0/extcore.data.abstractions.8.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/extcore.data.entities.abstractions/8.0.0/extcore.data.entities.abstractions.8.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/magicalizer.data.entities.abstractions/3.0.0/magicalizer.data.entities.abstractions.3.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/magicalizer.data.repositories.abstractions/3.0.0/magicalizer.data.repositories.abstractions.3.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/magicalizer.filters.abstractions/3.0.0/magicalizer.filters.abstractions.3.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/platformus.core.data.entities/4.0.0/platformus.core.data.entities.4.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/platformus.website.data.entities/4.0.0/platformus.website.data.entities.4.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,25 @@
+﻿@model MediBook.Backend.ViewModels.Cities.IndexViewModel
+@{
+    this.ViewBag.Title = "Міста";
+    this.ViewBag.ActiveMenuItem = "cities";
+}
+<title-bar>
+    <positive-button href="/backend/cities/create">Додати місто</positive-button>
+</title-bar>
+<filter>
+    <drop-down-list-filter property-path="RegionId" options="@Model.RegionOptions" />
+</filter>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Назва" sorting-property-path="Name" />
+        <column label="Область" />
+    </columns>
+    <rows>
+        @foreach (CityViewModel city in this.Model.Cities)
+        {
+            <partial name="_City" for="@city" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

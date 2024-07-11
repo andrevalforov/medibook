@@ -1,0 +1,129 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Supervision.Data.Abstractions/1.0.0": {
+        "dependencies": {
+          "ExtCore.Data.Abstractions": "4.0.0",
+          "NETStandard.Library": "2.0.3",
+          "Supervision.Data.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Supervision.Data.Abstractions.dll": {}
+        }
+      },
+      "ExtCore.Data.Abstractions/4.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Abstractions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "ExtCore.Data.Entities.Abstractions/4.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Platformus.Globalization.Data.Entities/1.0.0": {
+        "dependencies": {
+          "ExtCore.Data.Entities.Abstractions": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Globalization.Data.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Platformus.Security.Data.Entities/1.0.0": {
+        "dependencies": {
+          "ExtCore.Data.Entities.Abstractions": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Security.Data.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Supervision.Data.Entities/1.0.0": {
+        "dependencies": {
+          "Platformus.Globalization.Data.Entities": "1.0.0",
+          "Platformus.Security.Data.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Supervision.Data.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Supervision.Data.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtCore.Data.Abstractions/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9AIhuMbtfedl+3SxZZJ6rZgcxks5pTuUcU5CL7+jrtihGJhWk6SNty7vRNpXcCio/bHfbZcNcxn0Vj7ua+5w1g==",
+      "path": "extcore.data.abstractions/4.0.0",
+      "hashPath": "extcore.data.abstractions.4.0.0.nupkg.sha512"
+    },
+    "ExtCore.Data.Entities.Abstractions/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G1K2z0Qd4BlI4t4aXX0S6/LrLxD2Y3kTpuB8FMNq652tEEdXjj3ZS01CFP4hqWnALO0rRFnpCvHmO/afmh4pkg==",
+      "path": "extcore.data.entities.abstractions/4.0.0",
+      "hashPath": "extcore.data.entities.abstractions.4.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Platformus.Globalization.Data.Entities/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n50aBKrTmZi5q5cfRjY1bv4TNc5th6kN9upAe6kNJQ+qbfLrMwb43vfKTcG6y06ZMX/HMD1ejFiUt/ON4S0JEA==",
+      "path": "platformus.globalization.data.entities/1.0.0",
+      "hashPath": "platformus.globalization.data.entities.1.0.0.nupkg.sha512"
+    },
+    "Platformus.Security.Data.Entities/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xm4zgtYvVP4BDwut/bO6G03zlcoGmUVwX9wdOspA7yEog2mZqKTeK8aYWEQofiE+UdoxL2QwpO2BwrR0SPKcSQ==",
+      "path": "platformus.security.data.entities/1.0.0",
+      "hashPath": "platformus.security.data.entities.1.0.0.nupkg.sha512"
+    },
+    "Supervision.Data.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

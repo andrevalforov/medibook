@@ -1,0 +1,8 @@
+﻿@model MediBook.Backend.ViewModels.Shared.CityViewModel
+<row class="table__row" href="/backend/cities/edit/@Model.Id">
+    <cell>@Model.Name</cell>
+    <cell>@Model.Region</cell>
+    <row-controls>
+        <delete-button href="/backend/cities/delete/@Model.Id"></delete-button>
+    </row-controls>
+</row>

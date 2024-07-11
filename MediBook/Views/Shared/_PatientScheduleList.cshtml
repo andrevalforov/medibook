@@ -1,0 +1,9 @@
+﻿@model IEnumerable<MediBook.ViewModels.Shared.ConsultationsScheduleViewModel>
+@{
+	Layout = null;
+}
+
+@foreach (var schedule in Model)
+{
+	@Html.Partial("_ScheduleItem", schedule)
+}

@@ -1,0 +1,15 @@
+﻿@model MediBook.Backend.ViewModels.Organizations.CreateOrEditViewModel
+@{
+  this.ViewBag.Title = (this.Model.Id == null ? "Додавання організації" : "Редагування організації");
+  this.ViewBag.ActiveMenuItem = "organizations";
+}
+<form class="form" method="post">
+  <title-bar>
+    <submit-button>Зберегти</submit-button>
+    <neutral-button href="/backend/organizations">Скасувати</neutral-button>
+  </title-bar>
+  <single-line-text-field for="Name" />
+  <drop-down-list-field for="RegionValue" options="@Model.RegionOptions" />
+  <drop-down-list-field for="CityValue" options="@Model.CityOptions" />
+  <single-line-text-field for="Address" />
+</form>

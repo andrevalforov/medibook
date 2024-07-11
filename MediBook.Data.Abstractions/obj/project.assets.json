@@ -1,0 +1,280 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "ExtCore.Data.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExtCore.Data.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Abstractions.dll": {}
+        }
+      },
+      "ExtCore.Data.Entities.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll": {}
+        }
+      },
+      "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ExtCore.Data.Entities.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll": {}
+        }
+      },
+      "Magicalizer.Data.Repositories.Abstractions/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ExtCore.Data.Abstractions": "8.0.0",
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Magicalizer.Data.Repositories.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Data.Repositories.Abstractions.dll": {}
+        }
+      },
+      "Magicalizer.Filters.Abstractions/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll": {}
+        }
+      },
+      "Platformus.Core.Data.Entities/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Platformus.Core.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Core.Data.Entities.dll": {}
+        }
+      },
+      "Platformus.Website.Data.Entities/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Magicalizer.Data.Entities.Abstractions": "3.0.0",
+          "Magicalizer.Filters.Abstractions": "3.0.0",
+          "Platformus.Core.Data.Entities": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Platformus.Website.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Platformus.Website.Data.Entities.dll": {}
+        }
+      },
+      "MediBook.Data.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Platformus.Core.Data.Entities": "4.0.0",
+          "Platformus.Website.Data.Entities": "4.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MediBook.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediBook.Data.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExtCore.Data.Abstractions/8.0.0": {
+      "sha512": "92/+AdQ29BRtqgFCMO266rwo9J17KkqsXemPE1NiJPwAEOGvhoHRe+ecyDlJ59owhEtqRgta0Kja7PGTQqk17Q==",
+      "type": "package",
+      "path": "extcore.data.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "extcore.data.abstractions.8.0.0.nupkg.sha512",
+        "extcore.data.abstractions.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/ExtCore.Data.Abstractions.dll"
+      ]
+    },
+    "ExtCore.Data.Entities.Abstractions/8.0.0": {
+      "sha512": "td/yAEPn9kBjVrfFw6fgU530iuiRiOwbCm2+pDYYuqw8spgi+Ip5+fj6hcn6xd/f8sxIe157rnenLgt/IAD9yA==",
+      "type": "package",
+      "path": "extcore.data.entities.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "extcore.data.entities.abstractions.8.0.0.nupkg.sha512",
+        "extcore.data.entities.abstractions.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/ExtCore.Data.Entities.Abstractions.dll"
+      ]
+    },
+    "Magicalizer.Data.Entities.Abstractions/3.0.0": {
+      "sha512": "Gs5eR6RIKgoeZVKO+XicZdQm6l6/H2leFwfpqPMrWmmQdsyifNc/BNm6RX470ZUlYM4ri/26orSkF7Tk74CyHw==",
+      "type": "package",
+      "path": "magicalizer.data.entities.abstractions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Magicalizer.Data.Entities.Abstractions.dll",
+        "magicalizer.data.entities.abstractions.3.0.0.nupkg.sha512",
+        "magicalizer.data.entities.abstractions.nuspec"
+      ]
+    },
+    "Magicalizer.Data.Repositories.Abstractions/3.0.0": {
+      "sha512": "LJpNja5btdzOd92lX581fDUVuJvg/8R1gyw60PqH9tW20wRTVnmIgloOCmJKiahUDYH525gE3UNpPg5H2uf+tQ==",
+      "type": "package",
+      "path": "magicalizer.data.repositories.abstractions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Magicalizer.Data.Repositories.Abstractions.dll",
+        "magicalizer.data.repositories.abstractions.3.0.0.nupkg.sha512",
+        "magicalizer.data.repositories.abstractions.nuspec"
+      ]
+    },
+    "Magicalizer.Filters.Abstractions/3.0.0": {
+      "sha512": "tmYIzmBdU3GzoVdgbZNs5FGtGktUHQTfaDzyLhcvR2h+/Xx1bNLeWQiwb8A2i9colqM3GG9H5R5Kbr8aPFM3cw==",
+      "type": "package",
+      "path": "magicalizer.filters.abstractions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Magicalizer.Filters.Abstractions.dll",
+        "magicalizer.filters.abstractions.3.0.0.nupkg.sha512",
+        "magicalizer.filters.abstractions.nuspec"
+      ]
+    },
+    "Platformus.Core.Data.Entities/4.0.0": {
+      "sha512": "MMVVeCHoAn2U4StEBt6CuzLlZFmu/v8FHpdUqfuG65elvJKW+5pb8VcsA/5QR/FwbxOp73C3jU7/cmhvumi5mA==",
+      "type": "package",
+      "path": "platformus.core.data.entities/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Platformus.Core.Data.Entities.dll",
+        "platformus.core.data.entities.4.0.0.nupkg.sha512",
+        "platformus.core.data.entities.nuspec"
+      ]
+    },
+    "Platformus.Website.Data.Entities/4.0.0": {
+      "sha512": "UERi6ThXlbyxQEpwbtK7Y0XLZoCtGkBx/DbK9Sa96BI822IcOV7qCvqruHqWmdgr2SFigaX5Ow4hEh9xwC55iQ==",
+      "type": "package",
+      "path": "platformus.website.data.entities/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Platformus.Website.Data.Entities.dll",
+        "platformus.website.data.entities.4.0.0.nupkg.sha512",
+        "platformus.website.data.entities.nuspec"
+      ]
+    },
+    "MediBook.Data.Entities/1.0.0": {
+      "type": "project",
+      "path": "../MediBook.Data.Entities/MediBook.Data.Entities.csproj",
+      "msbuildProject": "../MediBook.Data.Entities/MediBook.Data.Entities.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "ExtCore.Data.Abstractions >= 8.0.0",
+      "Magicalizer.Data.Repositories.Abstractions >= 3.0.0",
+      "MediBook.Data.Entities >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/pc/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
+      "projectName": "MediBook.Data.Abstractions",
+      "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
+      "packagesPath": "/Users/pc/.nuget/packages/",
+      "outputPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/pc/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj": {
+              "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "ExtCore.Data.Abstractions": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Magicalizer.Data.Repositories.Abstractions": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

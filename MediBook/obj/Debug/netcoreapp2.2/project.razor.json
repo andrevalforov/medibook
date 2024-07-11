@@ -1,0 +1,196 @@
+{
+  "SerializedFilePath": "/Users/pc/Projects/supervision-web/Supervision/obj/Debug/netcoreapp2.2/project.razor.json",
+  "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Supervision.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "7.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "Supervision",
+  "Documents": [
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_Calendar.cshtml",
+      "TargetPath": "Views\\Shared\\_Calendar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Areas/Backend/Views/Shared/_BackendScript.cshtml",
+      "TargetPath": "Areas\\Backend\\Views\\Shared\\_BackendScript.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/CurrentSuperviseePage.cshtml",
+      "TargetPath": "Views\\Default\\CurrentSuperviseePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/SuperviseePage.cshtml",
+      "TargetPath": "Views\\Default\\SuperviseePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/HomePage.cshtml",
+      "TargetPath": "Views\\Default\\HomePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/SuperviseeSchedulePage.cshtml",
+      "TargetPath": "Views\\Default\\SuperviseeSchedulePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/SupervisorSchedulePage.cshtml",
+      "TargetPath": "Views\\Default\\SupervisorSchedulePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SuperviseeScheduleList.cshtml",
+      "TargetPath": "Views\\Shared\\_SuperviseeScheduleList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/ConcreteNewsPage.cshtml",
+      "TargetPath": "Views\\Default\\ConcreteNewsPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_Form.cshtml",
+      "TargetPath": "Views\\Shared\\_Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/EditPage.cshtml",
+      "TargetPath": "Views\\Supervisees\\EditPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/SchedulePage.cshtml",
+      "TargetPath": "Views\\Supervisees\\SchedulePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisees/CompleteSupervisionPage.cshtml",
+      "TargetPath": "Views\\Supervisees\\CompleteSupervisionPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/EditPage.cshtml",
+      "TargetPath": "Views\\Supervisors\\EditPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/SupervisorsPage.cshtml",
+      "TargetPath": "Views\\Default\\SupervisorsPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SuperviseeScheduleItem.cshtml",
+      "TargetPath": "Views\\Shared\\_SuperviseeScheduleItem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_ReCAPTCHA.cshtml",
+      "TargetPath": "Views\\Shared\\_ReCAPTCHA.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SupervisorScheduleList.cshtml",
+      "TargetPath": "Views\\Shared\\_SupervisorScheduleList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_MenuItem.cshtml",
+      "TargetPath": "Views\\Shared\\_MenuItem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Account/SignInPage.cshtml",
+      "TargetPath": "Views\\Account\\SignInPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/BookPage.cshtml",
+      "TargetPath": "Views\\Supervisors\\BookPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/TopicsPage.cshtml",
+      "TargetPath": "Views\\Default\\TopicsPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Shared/_SupervisorScheduleItem.cshtml",
+      "TargetPath": "Views\\Shared\\_SupervisorScheduleItem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/SchedulePage.cshtml",
+      "TargetPath": "Views\\Supervisors\\SchedulePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/FeedbackPage.cshtml",
+      "TargetPath": "Views\\Default\\FeedbackPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/SupervisorPage.cshtml",
+      "TargetPath": "Views\\Default\\SupervisorPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Supervisors/CompleteSupervisionPage.cshtml",
+      "TargetPath": "Views\\Supervisors\\CompleteSupervisionPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Account/RestorePassword.cshtml",
+      "TargetPath": "Views\\Account\\RestorePassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/RegularPage.cshtml",
+      "TargetPath": "Views\\Default\\RegularPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Account/SignUpPage.cshtml",
+      "TargetPath": "Views\\Account\\SignUpPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/NewsPage.cshtml",
+      "TargetPath": "Views\\Default\\NewsPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/pc/Projects/supervision-web/Supervision/Views/Default/CurrentSupervisorPage.cshtml",
+      "TargetPath": "Views\\Default\\CurrentSupervisorPage.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.3"
+}

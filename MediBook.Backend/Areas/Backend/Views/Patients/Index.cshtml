@@ -1,0 +1,35 @@
+﻿@model MediBook.Backend.ViewModels.Patients.IndexViewModel
+@{
+    this.ViewBag.Title = "Пацієнти";
+    this.ViewBag.ActiveMenuItem = "patients";
+}
+<title-bar>
+    <positive-button href="/backend/patients/create">Додати пацієнта</positive-button>
+</title-bar>
+<filter>
+    <text-filter property-path="Phone.Contains" label="Телефон" />
+    <text-filter property-path="Email.Contains" label="Email" />
+    <filter-group>
+        <filter-label>Дата народження вiд</filter-label>
+        <date-filter property-path="Birthday.From" />
+        <filter-label>до</filter-label>
+        <date-filter property-path="Birthday.To" />
+    </filter-group>
+</filter>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Повне ім'я" />
+        <column label="Телефон" />
+        <column label="Стать" />
+        <column label="Дата народження" />
+        <column label="Створено" sorting-property-path="Created" />
+    </columns>
+    <rows>
+        @foreach (PatientViewModel patient in this.Model.Patients)
+        {
+            <partial name="_Patient" for="@patient" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

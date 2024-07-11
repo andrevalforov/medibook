@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediBook.Data.Abstractions\MediBook.Data.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Platformus.Website.Data.EntityFramework.SqlServer" />
+    <None Remove="Platformus.Core.Data.EntityFramework.SqlServer" />
+    <None Remove="System.Linq.Dynamic.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Platformus.Website.Data.EntityFramework.SqlServer" Version="4.0.0" />
+    <PackageReference Include="Platformus.Core.Data.EntityFramework.SqlServer" Version="4.0.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.25" />
+    <PackageReference Include="Magicalizer.Data.Repositories.EntityFramework" Version="3.0.0" />
+  </ItemGroup>
+</Project>

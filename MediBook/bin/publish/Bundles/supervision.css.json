@@ -1,0 +1,6 @@
+{
+  "outputFile": "wwwroot/css/supervision.min.css",
+  "inputFiles": [
+    "Styles/supervision.css"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿@model MediBook.Backend.ViewModels.Shared.PatientViewModel
+<row class="table__row" href="/backend/patients/edit/@Model.Id">
+    <cell>@Model.FullName</cell>
+    <cell>@Model.Phone</cell>
+    <cell>@Model.Gender</cell>
+    <cell>@Model.Birthday</cell>
+    <cell>@Model.Created</cell>
+    <row-controls>
+        <delete-button href="/backend/patients/delete/@Model.Id"></delete-button>
+    </row-controls>
+</row>

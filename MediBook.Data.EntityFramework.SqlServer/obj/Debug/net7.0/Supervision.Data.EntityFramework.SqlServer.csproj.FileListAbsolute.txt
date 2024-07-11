@@ -1,0 +1,17 @@
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.deps.json
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.Abstractions.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.Entities.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.Abstractions.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/bin/Debug/net7.0/Supervision.Data.Entities.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.csproj.AssemblyReference.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.AssemblyInfoInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.AssemblyInfo.cs
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.csproj.CoreCompileInputs.cache
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.csproj.CopyComplete
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/refint/Supervision.Data.EntityFramework.SqlServer.dll
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/Supervision.Data.EntityFramework.SqlServer.pdb
+/Users/pc/Projects/supervision-web/Supervision.Data.EntityFramework.SqlServer/obj/Debug/net7.0/ref/Supervision.Data.EntityFramework.SqlServer.dll

@@ -1,0 +1,21 @@
+﻿@model MediBook.Backend.ViewModels.Regions.IndexViewModel
+@{
+  this.ViewBag.Title = "Області";
+  this.ViewBag.ActiveMenuItem = "regions";
+}
+<title-bar>
+    <positive-button href="/backend/regions/create">Додати область</positive-button>
+</title-bar>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Назва" sorting-property-path="Name" />
+    </columns>
+    <rows>
+        @foreach (RegionViewModel region in this.Model.Regions)
+        {
+            <partial name="_Region" for="@region" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

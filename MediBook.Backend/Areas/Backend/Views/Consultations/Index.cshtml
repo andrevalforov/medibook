@@ -1,0 +1,34 @@
+﻿@model MediBook.Backend.ViewModels.Consultations.IndexViewModel
+@{
+    this.ViewBag.Title = "Консультації";
+    this.ViewBag.ActiveMenuItem = "consultations";
+}
+<title-bar>
+    <neutral-button href="/backend/consultations/export">Експорт</neutral-button>
+</title-bar>
+<filter>
+    <drop-down-list-filter property-path="DoctorId" options="Model.DoctorOptions" />
+    <drop-down-list-filter property-path="Status" options="Model.StatusOptions" />
+    <filter-group>
+        <filter-label>Дата проведення вiд</filter-label>
+        <date-filter property-path="Scheduled.From" />
+        <filter-label>до</filter-label>
+        <date-filter property-path="Scheduled.To" />
+    </filter-group>
+</filter>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Лікар" />
+        <column label="Пацієнт" />
+        <column label="Статус" />
+        <column label="Заплановано" sorting-property-path="Scheduled" />
+    </columns>
+    <rows>
+        @foreach (ConsultationViewModel consultation in this.Model.Consultations)
+        {
+            <partial name="_Consultation" for="@consultation" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

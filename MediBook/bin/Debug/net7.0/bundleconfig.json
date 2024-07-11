@@ -1,0 +1,20 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/css/supervision.min.css",
+    "inputFiles": [
+      "Styles/supervision.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/supervision.min.js",
+    "inputFiles": [
+      "Scripts/supervision.js",
+      "Scripts/registration.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

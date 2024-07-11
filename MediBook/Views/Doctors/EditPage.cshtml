@@ -1,0 +1,67 @@
+﻿@model MediBook.ViewModels.Doctors.EditPageViewModel
+@{
+  this.ViewBag.Title = $"Особиста інформація | MediBook";
+}
+
+<div class="container__content content">
+  <div class="__box">
+    <h1>Особиста інформація</h1>
+    <form class="form" method="post">
+        <div class="form__field field">
+            <label class="field__label label" asp-for="FullName"></label>
+            <input class="field__text-box text-box" asp-for="FullName" type="text" />
+            <span asp-validation-for="FullName"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="About"></label>
+            <br />
+            <textarea class="field__text-area text-area" asp-for="About"></textarea>
+            <span asp-validation-for="About"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="ProfessionalExperience"></label>
+            <br />
+            <textarea class="field__text-area text-area" asp-for="ProfessionalExperience"></textarea>
+            <span asp-validation-for="ProfessionalExperience"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="ProfessionalEducation"></label>
+            <br />
+            <textarea class="field__text-area text-area" asp-for="ProfessionalEducation"></textarea>
+            <span asp-validation-for="ProfessionalEducation"></span>
+        </div>
+        <h2>Налаштування</h2>
+        <div class="form__field field">
+            <label style="font: bold 1rem 'Montserrat',sanf-serif;">
+                <input asp-for="IsAvailableOnline" type="checkbox" />
+                Можливий прийом онлайн
+            </label>
+            <span asp-validation-for="IsAvailableOnline"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="Room"></label>
+            <input class="field__text-box text-box" asp-for="Room" type="text" />
+            <span asp-validation-for="Room"></span>
+        </div>
+        @*<h2>Зміна паролю</h2>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="OldPassword"></label>
+            <input class="field__text-box text-box" type="password" asp-for="OldPassword" autocomplete="new-password" />
+            <span asp-validation-for="OldPassword"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="NewPassword"></label>
+            <input class="field__text-box text-box" type="password" asp-for="NewPassword" autocomplete="new-password" />
+            <span asp-validation-for="NewPassword"></span>
+        </div>
+        <div class="form__field field">
+            <label class="field__label label" asp-for="ConfirmPassword"></label>
+            <input class="field__text-box text-box" type="password" asp-for="ConfirmPassword" autocomplete="new-password" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>*@
+        <div class="form__buttons buttons">
+            <button class="buttons__button button button--positive" type="submit">Зберегти</button>
+        </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision.Backend/wwwroot/areas/backend/css/certificate.min.css",
+      "PackagePath": "staticwebassets/areas/backend/css/certificate.min.css"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision.Backend/wwwroot/areas/backend/css/supervision.min.css",
+      "PackagePath": "staticwebassets/areas/backend/css/supervision.min.css"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision.Backend/wwwroot/areas/backend/images/alliance-logo.png",
+      "PackagePath": "staticwebassets/areas/backend/images/alliance-logo.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision.Backend/wwwroot/areas/backend/images/signature.png",
+      "PackagePath": "staticwebassets/areas/backend/images/signature.png"
+    },
+    {
+      "Id": "/Users/pc/Projects/supervision-web/Supervision.Backend/wwwroot/areas/backend/js/supervision.min.js",
+      "PackagePath": "staticwebassets/areas/backend/js/supervision.min.js"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.Supervision.Backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.Supervision.Backend.props",
+      "PackagePath": "build\\Supervision.Backend.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.Supervision.Backend.props",
+      "PackagePath": "buildMultiTargeting\\Supervision.Backend.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.Supervision.Backend.props",
+      "PackagePath": "buildTransitive\\Supervision.Backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

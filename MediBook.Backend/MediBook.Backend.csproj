@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Backend\Views\**;wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+    <PackageReference Include="Platformus.Core.Backend" Version="4.0.0" />
+    <PackageReference Include="Platformus.Images" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediBook.Data.Abstractions\MediBook.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\MediBook.Data.Entities\MediBook.Data.Entities.csproj" />
+    <ProjectReference Include="..\MediBook.Services.Abstractions\MediBook.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\MediBook.Services.Defaults\MediBook.Services.Defaults.csproj" />
+  </ItemGroup>
+
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.6.375" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Platformus.Core.Backend" />
+    <None Remove="Platformus.Images" />
+    <None Remove="Areas\Backend\ViewModels\Specializations\" />
+    <None Remove="Areas\Backend\ViewModels\Specializations\Index\" />
+    <None Remove="Areas\Backend\ViewModels\Specializations\CreateOrEdit\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\Specialization\" />
+    <None Remove="Areas\Backend\Views\Specializations\" />
+    <None Remove="Areas\Backend\ViewModels\Doctors\" />
+    <None Remove="Areas\Backend\ViewModels\Doctors\Index\" />
+    <None Remove="Areas\Backend\ViewModels\Doctors\CreateOrEdit\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\DoctorSpecialization\" />
+    <None Remove="Areas\Backend\Views\Doctors\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\Doctor\" />
+    <None Remove="Areas\Backend\ViewModels\Patients\" />
+    <None Remove="Areas\Backend\ViewModels\Patients\Index\" />
+    <None Remove="Areas\Backend\ViewModels\Patients\CreateOrEdit\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\Patient\" />
+    <None Remove="Areas\Backend\ViewModels\Consultations\" />
+    <None Remove="Areas\Backend\ViewModels\Consultations\Index\" />
+    <None Remove="Areas\Backend\ViewModels\Consultations\Details\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\Consultation\" />
+    <None Remove="Areas\Backend\Views\Consultations\" />
+    <None Remove="Areas\Backend\Views\Patients\" />
+    <None Remove="Areas\Backend\ViewModels\Shared\Attachment\" />
+    <None Remove="Areas\Backend\Views\Shared\Partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Backend\ViewModels\Specializations\" />
+    <Folder Include="Areas\Backend\ViewModels\Specializations\Index\" />
+    <Folder Include="Areas\Backend\ViewModels\Specializations\CreateOrEdit\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\Specialization\" />
+    <Folder Include="Areas\Backend\Views\Specializations\" />
+    <Folder Include="Areas\Backend\ViewModels\Doctors\" />
+    <Folder Include="Areas\Backend\ViewModels\Doctors\Index\" />
+    <Folder Include="Areas\Backend\ViewModels\Doctors\CreateOrEdit\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\DoctorSpecialization\" />
+    <Folder Include="Areas\Backend\Views\Doctors\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\Doctor\" />
+    <Folder Include="Areas\Backend\ViewModels\Patients\" />
+    <Folder Include="Areas\Backend\ViewModels\Patients\Index\" />
+    <Folder Include="Areas\Backend\ViewModels\Patients\CreateOrEdit\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\Patient\" />
+    <Folder Include="Areas\Backend\ViewModels\Consultations\" />
+    <Folder Include="Areas\Backend\ViewModels\Consultations\Index\" />
+    <Folder Include="Areas\Backend\ViewModels\Consultations\Details\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\Consultation\" />
+    <Folder Include="Areas\Backend\Views\Consultations\" />
+    <Folder Include="Areas\Backend\Views\Patients\" />
+    <Folder Include="Areas\Backend\ViewModels\Shared\Attachment\" />
+    <Folder Include="Areas\Backend\Views\Shared\Partials\" />
+  </ItemGroup>
+</Project>

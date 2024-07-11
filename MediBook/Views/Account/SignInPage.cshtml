@@ -1,0 +1,33 @@
+﻿@model MediBook.ViewModels.Account.SignInPageViewModel
+@{
+  this.ViewBag.Title = "Вхід | MediBook";
+}
+<div class="container__content content">
+  <div class="__box">
+    <h1>Вхід</h1>
+    <form class="form" method="post">
+      <div class="form__field field">
+        <label class="field__label label" asp-for="Email"></label>
+        <input class="field__text-box text-box" asp-for="Email" type="text" autocomplete="false" />
+        <span asp-validation-for="Email"></span>
+      </div>
+      <div class="form__field field">
+        <label class="field__label label" asp-for="Password"></label>
+        <input class="field__text-box text-box" asp-for="Password" type="password" autocomplete="new-password" />
+        <span asp-validation-for="Password"></span>
+      </div>
+      <div class="form__field field">
+        <label class="label">
+          <input asp-for="RememberMe" type="checkbox" /> Запам'ятати мене
+        </label>
+      </div>
+      <div class="form__buttons buttons">
+        <button class="buttons__button button button--positive" type="submit">Увійти</button>
+      </div>
+    </form>
+    @*<h3>Забули пароль?</h3>
+    <a href="/restore-password">Відновлення паролю</a>*@
+    <h3>Ще не зареєстровані?</h3>
+    <a href="/sign-up">Реєстрація</a>
+  </div>
+</div>

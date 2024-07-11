@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>6653668a-d96d-479e-ba69-4bbf21d2eaa4</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'WebApplication' " />
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.7.4" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.4" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Platformus.Images" Version="4.0.0" />
+    <PackageReference Include="Platformus.WebApplication" Version="4.0.0" />
+    <PackageReference Include="Platformus.Website.Backend" Version="4.0.0" />
+    <PackageReference Include="Platformus.Website.Data.EntityFramework.SqlServer" Version="4.0.0" />
+    <PackageReference Include="Platformus.Core" Version="4.0.0" />
+    <PackageReference Include="Platformus.Website.Frontend" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediBook.Backend\MediBook.Backend.csproj" />
+    <ProjectReference Include="..\MediBook.Data.EntityFramework.SqlServer\MediBook.Data.EntityFramework.SqlServer.csproj" />
+    <ProjectReference Include="..\MediBook.Services.Abstractions\MediBook.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\MediBook.Services.Defaults\MediBook.Services.Defaults.csproj" />
+  </ItemGroup>
+
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Supervision' " />
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.9.406" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\backend\" />
+    <Content Remove="wwwroot\backend\images\" />
+    <Content Remove="wwwroot\errors\" />
+    <Content Remove="wwwroot\attachments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\backend\" />
+    <Folder Include="wwwroot\backend\images\" />
+    <Folder Include="ViewModels\Shared\Attachment\" />
+    <Folder Include="ViewModels\Shared\ConsultationsScheduleGroup\" />
+    <Folder Include="ViewModels\Shared\Doctor\" />
+    <Folder Include="ViewModels\Shared\Patient\" />
+    <Folder Include="ViewModels\Shared\Specialization\" />
+    <Folder Include="ViewModels\Default\Consultation\" />
+    <Folder Include="ViewModels\Shared\SchedulePage\" />
+    <Folder Include="wwwroot\errors\" />
+    <Folder Include="wwwroot\attachments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ViewModels\Shared\Attachment\" />
+    <None Remove="ViewModels\Shared\ConsultationsScheduleGroup\" />
+    <None Remove="ViewModels\Shared\Doctor\" />
+    <None Remove="ViewModels\Shared\Patient\" />
+    <None Remove="ViewModels\Shared\Specialization\" />
+    <None Remove="ViewModels\Default\Consultation\" />
+    <None Remove="ViewModels\Shared\SchedulePage\" />
+  </ItemGroup>
+</Project>

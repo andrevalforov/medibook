@@ -1,0 +1,27 @@
+﻿@model MediBook.Backend.ViewModels.Doctors.IndexViewModel
+@{
+    this.ViewBag.Title = "Лікарі";
+    this.ViewBag.ActiveMenuItem = "doctors";
+}
+<title-bar>
+    <positive-button href="/backend/doctors/create">Додати лікаря</positive-button>
+</title-bar>
+<filter>
+    <text-filter property-path="FullName" label="Повне ім'я" />
+</filter>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Повне ім'я" sorting-property-path="FullName" />
+        <column label="Заклад" />
+        <column label="Спеціальність" />
+        <column label="Створено" sorting-property-path="Created" />
+    </columns>
+    <rows>
+        @foreach (DoctorViewModel doctor in this.Model.Doctors)
+        {
+            <partial name="_Doctor" for="@doctor" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

@@ -1,0 +1,57 @@
+﻿@model MediBook.ViewModels.Default.PatientPageViewModel
+@using MediBook.Data.Entities
+@{
+  this.ViewBag.Title = this.Model.FullName;
+}
+<div class="container__content content">
+    <div class="__box">
+        <h1>
+            @Model.FullName
+        </h1>
+        <p><b>Стать:</b> @Model.Gender.GetDisplayName()</p>
+        <p><b>Дата народження:</b> @Model.Birthday.ToString("dd.MM.yyyy")</p>
+        <p><b>Email:</b> @Model.Email</p>
+        <p><b>Телефон:</b> @Model.Phone</p>
+        <p><b>Особливі відмітки:</b> @Model.About</p>
+        <div class="form__buttons buttons">
+            <a class="buttons__button button button--positive" href="/patients/me/edit">Редагувати особисту інформацію</a>
+        </div>
+        @*<h2>Розклад консультацій</h2>
+        <div class="form__field field">
+            <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="year" onchange="onCalendarFiltersChange('supervisee', @this.Model.Id)">
+                @for (int year = DateTime.Now.Year - 1; year <= DateTime.Now.Year + 1; year++)
+                {
+                    if (year == DateTime.Now.Year)
+                    {
+                        <option value="@year" selected>@year</option>
+                    }
+                    else
+                    {
+                        <option value="@year">@year</option>
+                    }
+                }
+            </select>
+            <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="month" onchange="onCalendarFiltersChange('supervisee', @this.Model.Id)">
+                @{
+                    int monthIndex = 1;
+                    int currentMonthNumber = DateTime.Now.Month;
+                }
+                @foreach (string monthName in System.Globalization.DateTimeFormatInfo.CurrentInfo.MonthNames.Where(m => !string.IsNullOrWhiteSpace(m)))
+                {
+                    if (monthIndex == currentMonthNumber)
+                    {
+                        <option value="@monthIndex" selected>@monthName</option>
+                    }
+                    else
+                    {
+                        <option value="@monthIndex">@monthName</option>
+                    }
+                    monthIndex++;
+                }
+            </select>
+        </div>
+        <div id="calendarContainer" on="onCalendarFiltersChange('supervisee', @this.Model.Id)">
+            @Html.Partial("_Calendar", this.Model.Calendar as object)
+        </div>*@
+    </div>
+</div>

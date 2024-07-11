@@ -1,0 +1,50 @@
+﻿@model MediBook.Backend.ViewModels.Patients.CreateOrEditViewModel
+@{
+    this.ViewBag.Title = (this.Model.Id == null ? "Створення пацієнта" : "Редагування пацієнта");
+    this.ViewBag.ActiveMenuItem = "patients";
+}
+<form class="form" method="post">
+    <title-bar>
+        <button class="buttons__button button button--positive" type="submit">Зберегти</button>
+        <a class="buttons__button button button--neutral" href="@this.Context.Request.CombineUrl("/backend/patients")">Скасувати</a>
+    </title-bar>
+    <tabs>
+        <tab code="General">Основне</tab>
+        <tab code="Auth">Вхід</tab>
+    </tabs>
+    <tab-pages>
+        <tab-page code="General">
+            <single-line-text-field for="LastName" />
+            <single-line-text-field for="FirstName" />
+            <single-line-text-field for="MiddleName" />
+            <drop-down-list-field for="Gender" options="Model.GenderOptions" />
+            <date-field for="Birthday" />
+            <multiline-text-field for="About" height="Small" />
+            <checkbox-field for="IsActivated" />
+        </tab-page>
+
+        <tab-page code="Auth">
+            <div class="form__field field">
+                <label class="field__label label" for="email">Email</label>
+                <div class="field__required">обов’язково</div>
+                <input class="text-box field__text-box" autocomplete="false" data-val="true" data-val-required="Значення має бути вказано" id="email" name="email" type="text" value="@Model.Email">
+                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+            </div>
+            @if (TempData["Email"] != null)
+            {
+                <span id="EmailError" class="field-wrapper__error field-validation-error">@TempData["Email"]</span>
+            }
+            <single-line-text-field for="Phone" />
+            <div class="form__field field">
+                <label class="field__label label" for="password">Пароль</label>
+                <input class="text-box field__text-box" id="password" name="password" type="password" autocomplete="new-password">
+                <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+            </div>
+            @if (TempData["Password"] != null)
+            {
+                <span id="PasswordError" class="field-wrapper__error field-validation-error">@TempData["Password"]</span>
+            }
+            <secret-field for="RepeatPassword" />
+        </tab-page>
+    </tab-pages>
+</form>

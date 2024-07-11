@@ -1,0 +1,35 @@
+﻿@model MediBook.ViewModels.Shared.ConsultationsScheduleViewModel
+@using MediBook.Data.Entities
+@{
+    bool isDoctor = Context.User.IsInRole("Doctor");
+}
+<div class="supervisions__date">@Model.Date.ToShortDateString()</div>
+@foreach (var consultation in Model.Consultations)
+{
+    <div class="supervisions__supervision supervision pointer" onclick="location.href='/consultations/@consultation.Id'">
+        <div class="supervision__time">@consultation.Scheduled.ToShortTimeString()</div>
+        <div class="supervision__user">
+            Лікар: <a href="/doctors/@consultation.Doctor.Id">@consultation.Doctor.FullName</a>
+        </div>
+        @if (consultation.Status == ConsultationStatus.Booked && consultation.Scheduled < DateTime.Now)
+        {
+            <div class="status status--info">Незавершена</div>
+        }
+        else if (consultation.Status == ConsultationStatus.Booked || consultation.Status == ConsultationStatus.Completed || consultation.Status == ConsultationStatus.Available)
+        {
+            <div class="status status--success">@consultation.Status.Value.GetDisplayName()</div>
+        }
+        else if (consultation.Status == ConsultationStatus.Canceled)
+        {
+            <div class="status status--fail">@consultation.Status.Value.GetDisplayName()</div>
+        }
+
+        @if (consultation.Scheduled > DateTime.Now.AddHours(-1) && consultation.Status == ConsultationStatus.Booked)
+        {
+            <button type="button" class="consultations__reject-btn consultations__reject-btn--doctor" onclick="cancelConsultationByPatient(@consultation.Id)">
+                <img src="/images/cross-red.svg" alt="Скасувати">
+            </button>
+        }
+
+    </div>
+}

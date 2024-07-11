@@ -1,0 +1,11 @@
+﻿@model dynamic
+@{
+  this.ViewBag.Title = this.Model.Page.Title;
+  this.ViewBag.MetaKeywords = this.Model.Page.MetaKeywords;
+  this.ViewBag.MetaDescription = this.Model.Page.MetaDescription;
+}
+<div class="container__content content">
+  <div class="__box">
+    @Html.Raw(this.Model.Page.Content)
+  </div>
+</div>

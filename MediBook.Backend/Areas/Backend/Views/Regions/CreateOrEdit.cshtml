@@ -1,0 +1,12 @@
+﻿@model MediBook.Backend.ViewModels.Regions.CreateOrEditViewModel
+@{
+  this.ViewBag.Title = (this.Model.Id == null ? "Додавання області" : "Редагування області");
+  this.ViewBag.ActiveMenuItem = "regions";
+}
+<form class="form" method="post">
+  <title-bar>
+    <submit-button>Зберегти</submit-button>
+    <neutral-button href="/backend/regions">Скасувати</neutral-button>
+  </title-bar>
+  <single-line-text-field for="Name" />
+</form>

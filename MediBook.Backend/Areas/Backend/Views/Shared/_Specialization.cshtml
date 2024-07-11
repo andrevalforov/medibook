@@ -1,0 +1,8 @@
+﻿@model MediBook.Backend.ViewModels.Shared.SpecializationViewModel
+<row class="table__row" href="/backend/specializations/edit/@Model.Id">
+    <cell>@Model.Name</cell>
+    <cell>@Model.Position</cell>
+    <row-controls>
+        <delete-button href="/backend/specializations/delete/@Model.Id"></delete-button>
+    </row-controls>
+</row>

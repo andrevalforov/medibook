@@ -1,0 +1,94 @@
+﻿@model MediBook.ViewModels.Doctors.DoctorsPageViewModel
+@using MediBook;
+@{
+    this.ViewBag.Title = "";
+}
+
+<div class="container__content content">
+    <div class="__box">
+        @{
+          this.Context.Request.ParseIntQueryParameter("specializationId", out int? specializationId);
+          specializationId = specializationId ?? default(int);
+
+          this.Context.Request.ParseIntQueryParameter("regionId", out int? regionId);
+          regionId = regionId ?? default(int);
+
+          this.Context.Request.ParseIntQueryParameter("isOnline", out int? isOnline);
+          isOnline = isOnline ?? default(int);
+        }
+        <div class="form__field field">
+            <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="specializationId" value="@specializationId" onchange="onFilterChange()">
+                @foreach (var specialization in this.Model.SpecializationOptions)
+                {
+                    if (!string.IsNullOrEmpty(specialization.Value) && int.Parse(specialization.Value) == specializationId)
+                    {
+                        <option value="@specialization.Value" selected>@specialization.Text</option>
+                    }
+                    else
+                    {
+                        <option value="@specialization.Value">@specialization.Text</option>
+                    }
+                }
+            </select>
+
+            <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="regionId" value="@regionId" onchange="onFilterChange()">
+                @foreach (var region in this.Model.RegionOptions)
+                {
+                    if (!string.IsNullOrEmpty(region.Value) && int.Parse(region.Value) == regionId)
+                    {
+                        <option value="@region.Value" selected>@region.Text</option>
+                    }
+                    else
+                    {
+                        <option value="@region.Value">@region.Text</option>
+                    }
+                }
+            </select>
+
+            <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="isOnline" value="@isOnline" onchange="onFilterChange()">
+                @foreach (var isOnlineOption in this.Model.IsOnlineOptions)
+                {
+                    if (!string.IsNullOrEmpty(isOnlineOption.Value) && int.Parse(isOnlineOption.Value) == isOnline)
+                    {
+                        <option value="@isOnlineOption.Value" selected>@isOnlineOption.Text</option>
+                    }
+                    else
+                    {
+                        <option value="@isOnlineOption.Value">@isOnlineOption.Text</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="content__users users">
+            @foreach (var doctor in this.Model.Doctors)
+            {
+                string photoUrl = string.IsNullOrWhiteSpace(doctor.PhotoUrl) ? "/images/avatar-default.png" : doctor.PhotoUrl;
+
+                <div class="users__user user user__box-shadow" onclick="location.href = '/doctors/@doctor.Id'">
+                    <div class="user__photo user__photo__list" style="background-image: url(@photoUrl);"></div>
+                    <div class="user__full-name">
+                        <a href="/doctors/@doctor.Id">@doctor.FullName</a>
+                        @if (doctor.IsAvailableOnline)
+                        {
+                            <img src="/images/video-camera.png" class="doctor__consultation-available-img" title="Доступний прийом онлайн">
+                        }
+                        @if (doctor.IsAvailableIn24Hours)
+                        {
+                            <span class="doctors__info-block">Консультація можлива в найближчі 24 години</span>
+                        }
+                    </div>
+                    <div class="user__topic-names topic-names">
+                        <div class="topic-names__box">
+                            @foreach (var specialization in doctor.Specializations)
+                            {
+                                <a class="topic-names__topic-name topic-name" href="/doctors?specializationid=@specialization.Id">@specialization.Name</a>
+                            }
+                        </div>
+                    </div>
+                    <p>@doctor.Organization.Name, @doctor.City</p>
+                    <a class="user__context-link context-link" href="/doctors/@doctor.Id">Детальніше</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

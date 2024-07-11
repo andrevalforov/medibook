@@ -1,0 +1,439 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/pc/Projects/medibook/MediBook.Backend/MediBook.Backend.csproj": {}
+  },
+  "projects": {
+    "/Users/pc/Projects/medibook/MediBook.Backend/MediBook.Backend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Backend/MediBook.Backend.csproj",
+        "projectName": "MediBook.Backend",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Backend/MediBook.Backend.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Backend/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj"
+              },
+              "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj"
+              },
+              "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj"
+              },
+              "/Users/pc/Projects/medibook/MediBook.Services.Defaults/MediBook.Services.Defaults.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Services.Defaults/MediBook.Services.Defaults.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "DinkToPdf": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "Platformus.Core.Backend": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Platformus.Images": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "System.Runtime.Loader": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
+        "projectName": "MediBook.Data.Abstractions",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "ExtCore.Data.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Magicalizer.Data.Repositories.Abstractions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj",
+        "projectName": "MediBook.Data.Entities",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/MediBook.Data.Entities.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Data.Entities/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Platformus.Core.Data.Entities": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Platformus.Website.Data.Entities": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj",
+        "projectName": "MediBook.Data.EntityFramework.SqlServer",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Magicalizer.Data.Repositories.EntityFramework": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Platformus.Core.Data.EntityFramework.SqlServer": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Platformus.Website.Data.EntityFramework.SqlServer": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.25, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj",
+        "projectName": "MediBook.Services.Abstractions",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pc/Projects/medibook/MediBook.Services.Defaults/MediBook.Services.Defaults.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pc/Projects/medibook/MediBook.Services.Defaults/MediBook.Services.Defaults.csproj",
+        "projectName": "MediBook.Services.Defaults",
+        "projectPath": "/Users/pc/Projects/medibook/MediBook.Services.Defaults/MediBook.Services.Defaults.csproj",
+        "packagesPath": "/Users/pc/.nuget/packages/",
+        "outputPath": "/Users/pc/Projects/medibook/MediBook.Services.Defaults/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj": {
+                "projectPath": "/Users/pc/Projects/medibook/MediBook.Services.Abstractions/MediBook.Services.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.4, )"
+            },
+            "Platformus.Core": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

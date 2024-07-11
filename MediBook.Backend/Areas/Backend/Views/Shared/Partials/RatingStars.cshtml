@@ -1,0 +1,6 @@
+﻿@model int
+
+<div class="rating-stars" title="@Model.ToString() stars">
+    <span class="rating-stars__background"></span>
+    <span class="rating-stars__foreground" style="width: @(Model * 100 / 5)%"></span>
+</div>

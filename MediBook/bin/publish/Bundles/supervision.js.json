@@ -1,0 +1,7 @@
+{
+  "outputFile": "wwwroot/js/supervision.min.js",
+  "inputFiles": [
+    "Scripts/supervision.js",
+    "Scripts/registration.js"
+  ]
+}

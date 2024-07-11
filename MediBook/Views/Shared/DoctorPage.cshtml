@@ -1,0 +1,97 @@
+﻿@model MediBook.ViewModels.Default.DoctorPageViewModel
+@{
+    this.ViewBag.Title = this.Model.FullName;
+}
+<div class="container__content content">
+    <div class="__box">
+        <h1>
+            @Model.FullName
+            @if (Model.IsAvailableOnline)
+            {
+                <img src="/images/video-camera.png" class="doctor__consultation-available-img" title="Доступний прийом онлайн">
+            }
+            @if (Model.IsAvailableIn24Hours)
+            {
+                <span class="doctors__info-block">Консультація можлива в найближчі 24 години</span>
+            }
+        </h1>
+        <div class="user">
+            @{ string photoUrl = string.IsNullOrWhiteSpace(Model.PhotoUrl) ? "/images/avatar-default.png" : Model.PhotoUrl; }
+            <div class="user__photo user__box-shadow" style="background-image: url(@photoUrl);"></div>
+            <div class="user__topic-names topic-names">
+                <div class="topic-names__box">
+                    @foreach (var specialization in this.Model.Specializations)
+                    {
+                        <a class="topic-names__topic-name topic-name" href="/doctors?specializationid=@specialization.Id">@specialization.Name</a>
+                    }
+                </div>
+            </div>
+            <p>@Model.Organization</p>
+            <p>@Model.City, @Model.Region @(Model.Region.Equals("Автономна Республіка Крим") ? string.Empty : "область")</p>
+        </div>
+
+        <h2>Розклад консультацій</h2>
+        @if (Model.HasAnyAvailableConsultation)
+        {
+            <div class="form__field field">
+                <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="year" onchange="onCalendarFiltersChange('doctor', @Model.Id)">
+                    @for (int year = DateTime.Now.Year - 1; year <= DateTime.Now.Year + 1; year++)
+                    {
+                        if (year == DateTime.Now.Year)
+                        {
+                            <option value="@year" selected>@year</option>
+                        }
+                        else
+                        {
+                            <option value="@year">@year</option>
+                        }
+                    }
+                </select>
+                <select class="field__drop-down-list field__drop-down-list--not-limited drop-down-list" id="month" onchange="onCalendarFiltersChange('doctor', @Model.Id)">
+                    @{
+                        int monthIndex = 1;
+                        int currentMonthNumber = DateTime.Now.Month;
+                    }
+                    @foreach (string monthName in System.Globalization.DateTimeFormatInfo.CurrentInfo.MonthNames.Where(m => !string.IsNullOrWhiteSpace(m)))
+                    {
+                        if (monthIndex == currentMonthNumber)
+                        {
+                            <option value="@monthIndex" selected>@monthName</option>
+                        }
+                        else
+                        {
+                            <option value="@monthIndex">@monthName</option>
+                        }
+                        monthIndex++;
+                    }
+                </select>
+            </div>
+
+            <div id="calendarContainer" on="onCalendarFiltersChange('doctor', @Model.Id)">
+                @Html.Partial("_Calendar", this.Model.Calendar as object)
+            </div>
+        }
+        else
+        {
+            <div class="content__info info info--warning">
+                <p>Наразі немає вільних слотів для запису на консультацію.</p>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(this.Model.About))
+        {
+            <h3>Про мене</h3>
+            <p>@Html.Raw(this.Model.About.Replace("\r\n", "</p><p>"))</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(this.Model.ProfessionalExperience))
+        {
+            <h3>Професійний досвід</h3>
+            <p>@Html.Raw(this.Model.ProfessionalExperience.Replace("\r\n", "</p><p>"))</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(this.Model.ProfessionalEducation))
+        {
+            <h3>Професійне навчання</h3>
+            <p>@Html.Raw(this.Model.ProfessionalEducation.Replace("\r\n", "</p><p>"))</p>
+        }
+    </div>
+</div>

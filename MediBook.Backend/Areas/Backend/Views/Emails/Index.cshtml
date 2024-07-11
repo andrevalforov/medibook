@@ -1,0 +1,22 @@
+﻿@model MediBook.Backend.ViewModels.Emails.IndexViewModel
+@{
+  this.ViewBag.Title = "Листи";
+  this.ViewBag.ActiveMenuItem = "emails";
+}
+<title-bar>
+</title-bar>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" />
+<table sorting="@Model.Sorting">
+    <columns>
+        <column label="Отримувач" sorting-property-path="Receiver" />
+        <column label="Тема" sorting-property-path="Subject" />
+        <column label="Надіслано" sorting-property-path="Sent" />
+    </columns>
+    <rows>
+        @foreach (EmailViewModel email in this.Model.Emails)
+        {
+            <partial name="_Email" for="@email" />
+        }
+    </rows>
+</table>
+<pager offset="@Model.Offset" limit="@Model.Limit" total="@Model.Total" is-secondary="true" />

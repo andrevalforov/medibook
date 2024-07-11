@@ -1,0 +1,37 @@
+﻿@model List<MediBook.ViewModels.Shared.ConsultationsScheduleGroupViewModel>
+@{
+	this.ViewBag.Title = "Мій розклад";
+}
+
+<div class="container__content content">
+	<div class="__box">
+		<h1>Мій розклад</h1>
+		<div class="tabs">
+			<div class="tabs__tab tabs__tab--active" data-tab-page-id="Current">Поточні</div>
+			<div class="tabs__tab" data-tab-page-id="Archived">Архівні</div>
+		</div>
+		<div class="tab-pages">
+			@foreach (var group in this.Model)
+			{
+				string tabId = $"tabPage{group.Code}";
+
+				<div class="tab-pages__tab-page" id="@tabId">
+					<div class="content__supervisions supervisions">
+						@foreach (var schedule in group.Consultations)
+						{
+							@Html.Partial("_ScheduleItem", schedule)
+						}
+					</div>
+
+					@if (group.ShowPagination)
+					{
+						<button class="reviews__button button button--positive" type="button" id="showMoreSupervisions@(group.Code)" 
+						        data-code="@(group.Code)" data-skip="10" data-type="supervisees">
+							<span id="showMoreText">Показати більше</span>
+						</button>
+					}
+				</div>
+			}
+		</div>
+	</div>
+</div>

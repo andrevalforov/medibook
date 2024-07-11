@@ -1,0 +1,68 @@
+﻿@model MediBook.ViewModels.Account.SignUpPageViewModel
+@{
+    this.ViewBag.Title = "Реєстрація | MediBook";
+}
+
+<div class="container__content content">
+    <div class="__box">
+        <h1>Реєстрація</h1>
+        <form class="form" method="post">
+            <div class="form__field field">
+                <label class="field__label label" asp-for="LastName"></label>
+                <input class="field__text-box text-box" asp-for="LastName" type="text" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="FirstName"></label>
+                <input class="field__text-box text-box" asp-for="FirstName" type="text" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="MiddleName"></label>
+                <input class="field__text-box text-box" asp-for="MiddleName" type="text" />
+                <span asp-validation-for="MiddleName"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label field__label--with-value" asp-for="Gender"></label>
+                @foreach (var gender in Model.GenderOptions)
+                {
+                    <label style="font: bold 1rem 'Montserrat',sanf-serif;">
+                        <input asp-for="Gender" type="radio" name="Gender" value="@gender.Value" />
+                        @gender.Text
+                    </label>
+                }
+                <span asp-validation-for="Gender"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="Birthday"></label>
+                <input class="field__text-box text-box" asp-for="Birthday" type="date" value="2000-01-01" />
+                <span asp-validation-for="Birthday"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="Email"></label>
+                <input class="field__text-box text-box" asp-for="Email" type="email" autocomplete="false" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="Phone"></label>
+                <input class="field__text-box text-box" asp-for="Phone" type="tel" />
+                <span asp-validation-for="Phone"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="Password"></label>
+                <input class="field__text-box text-box" asp-for="Password" type="password" autocomplete="new-password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div class="form__field field">
+                <label class="field__label label" asp-for="ConfirmPassword"></label>
+                <input class="field__text-box text-box" asp-for="ConfirmPassword" type="password" />
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+            <div class="form__buttons buttons">
+                <button id="submitRegistration" class="buttons__button button button--positive" type="submit">Зареєструватися</button>
+            </div>
+        </form>
+        <h3>Вже зареєстровані?</h3>
+        <a href="/sign-in">Вхід</a>
+    </div>
+</div>
