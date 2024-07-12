@@ -3,3 +3,6 @@
 /create database.sql
 /create tables.sql
 /insert platformus data.sql
+bin/
+obj/
+node_modules/

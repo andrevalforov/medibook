@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DnjBPNE15TJB1RW3mTj3ABgVSL5WN3wgogTZIWSUeuW5OOw3iUvRyObWiU5znk1ZwvsQ6LPCf16y5W5UWbSdTg==",
+  "dgSpecHash": "eboOwRyIH/s3IUs94zLs7hF7Iiip6SGuJ/dss+6QWQc4cy8fZpJCHQCAOjPCJoNmBNIAbqBNeo0pTw2Xgu5Wnw==",
   "success": true,
   "projectFilePath": "/Users/pc/Projects/medibook/MediBook.Data.EntityFramework.SqlServer/MediBook.Data.EntityFramework.SqlServer.csproj",
   "expectedPackageFiles": [

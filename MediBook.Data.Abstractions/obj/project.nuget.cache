@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wJtIPe8IYhTztDwIla9SDpXYSlf33KrIJyEZoKw3LbcMdYBaBwr/+edQ81EKCUmQYAECnft3PmGaWgojD0BWIA==",
+  "dgSpecHash": "RpyXsDcxXADIswRKNB8qu5lEYSsEplHcMx8tvfgLOaqMp0rZn5DCZ4LObDGXG4tonT+XAeU8uxQ3MTpWZlzfJQ==",
   "success": true,
   "projectFilePath": "/Users/pc/Projects/medibook/MediBook.Data.Abstractions/MediBook.Data.Abstractions.csproj",
   "expectedPackageFiles": [
