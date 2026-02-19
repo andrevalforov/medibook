@@ -10,7 +10,7 @@ A user-friendly interface was developed and the ability to effectively search, v
 
 <img width="482" alt="image" src="https://github.com/user-attachments/assets/ce1cc60d-9a82-4520-ac0d-5b5fa2cce424">
 
-The web application is implemented on the .NET framework version 7.0. 
-Database - MS SQL Server.
+The web application is implemented on the ASP.NET Core MVC framework (.NET 7.0). 
+Database - MS SQL Server with Entity Framework.
 Administration panel - Platformus CMS (https://platformus.net).
 Additional library - ExtCore (https://extcore.net).
